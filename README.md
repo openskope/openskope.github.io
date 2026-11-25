@@ -43,6 +43,17 @@ Font Awesome and embedded Dart Sass. Self-hosted [Bitter and Source Sans 3 fonts
 are shared with the SKOPE UI changes; font refreshes use `make deps-fonts`. See [dependency upgrades](docs/dependency-upgrades.md)
 and [agent guidance](AGENTS.md). OpenSKOPE omits their bibliography/catalog tooling.
 
+## Shared content and styling
+
+This repository owns `shared/web/`: reusable footer content, CSS/tokens,
+application terms and canonical application citation metadata. Hugo renders it
+directly; `/cite-skope/` and `/terms-of-use/` publish that content. SKOPE UI consumes
+a commit-pinned bundle and retains its application behavior and consent flow.
+Builds use local verified files with no reverse dependency on the app. See
+[shared web maintenance](docs/footer.md) for updates and validation.
+The source/build link identifies this website's Git revision; tracked local edits
+add `-dirty` to the build label.
+
 ## Content and migration
 
 Edit `content/`. Imported pages use readable HTML inside Markdown files to retain

@@ -1,0 +1,6 @@
+{{ $tokens := os.ReadFile "shared/web/tokens.json" | transform.Unmarshal }}
+{{ $css := ":root {\n" }}
+{{ range $name, $value := $tokens.css_variables }}{{ $css = printf "%s  %s: %s;\n" $css $name $value }}{{ end }}
+{{ $css = printf "%s}\n%s" $css (os.ReadFile "shared/web/footer.css") }}
+{{ $style := resources.FromString "css/skope-footer.css" $css | resources.Minify | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">

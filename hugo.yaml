@@ -9,7 +9,7 @@ disableKinds: [taxonomy, term]
 params:
   description: Synthesizing Knowledge of Past Environments
   offlineSearch: true
-  copyright: SKOPE contributors
+  website_source: https://github.com/openskope/openskope.github.io
   ui:
     navbar_logo: false
     navbar_theme: light

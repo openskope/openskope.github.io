@@ -79,3 +79,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid #17366e; outline-offs
   .skope-home-copy { max-width: 72ch; }
   .skope-home .td-content > figure { margin: 0; }
 }
+
+// Docsy's outer container has Bootstrap gutters; the shared footer spans them.
+.td-footer.skope-footer { width: auto; min-height: 0; margin-inline: calc(var(--bs-gutter-x, 1.5rem) * -.5); }

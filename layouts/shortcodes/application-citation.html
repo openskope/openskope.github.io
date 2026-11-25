@@ -1,0 +1,14 @@
+{{ $citation := os.ReadFile "shared/web/CITATION.cff" | transform.Unmarshal }}
+{{ $policy := os.ReadFile "shared/web/application-policy.json" | transform.Unmarshal }}
+<p>{{ $policy.citationGuidance }}</p>
+<blockquote><p>{{ range $index, $author := $citation.authors }}{{ if $index }}, {{ end }}{{ index $author "given-names" }} {{ index $author "family-names" }}{{ end }} ({{ time.Format "2006" (index $citation "date-released") }}). <em>{{ $citation.title }}</em> (version {{ $citation.version }}). <a href="https://doi.org/{{ $citation.doi }}">https://doi.org/{{ $citation.doi }}</a>.</p></blockquote>
+{{ $source := resources.FromString "citation/CITATION.cff" (os.ReadFile "shared/web/CITATION.cff") }}
+<p><a href="{{ $source.RelPermalink }}" download>Download CITATION.cff</a></p>
+<details><summary>BibTeX</summary><pre><code>@software{skope,
+author = { {{- range $index, $author := $citation.authors }}{{ if $index }} and {{ end }}{{ index $author "family-names" }}, {{ index $author "given-names" }}{{ end }} },
+title = { {{- $citation.title }} },
+version = { {{- $citation.version }} },
+doi = { {{- $citation.doi }} },
+url = { {{- $citation.url }} },
+year = { {{- time.Format "2006" (index $citation "date-released") }} }
+}</code></pre></details>

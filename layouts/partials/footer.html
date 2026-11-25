@@ -1,0 +1,20 @@
+{{/* The website owns the bundle; apps import its content and styling. */}}
+{{ $footer := os.ReadFile "shared/web/footer.json" | transform.Unmarshal }}
+<footer class="td-footer skope-footer d-print-none">
+  <div class="skope-footer__inner">
+    <div class="skope-footer__acknowledgments" aria-label="Acknowledgments">
+      {{ range $footer.acknowledgments }}<p>{{ range . }}{{ with .href }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}{{ .text }}{{ if .href }}</a>{{ end }}{{ end }}</p>{{ end }}
+    </div>
+    <div class="skope-footer__meta">
+      <span>&copy; {{ $footer.copyright.start_year }}-{{ now.Format "2006" }} {{ $footer.copyright.holder }}</span>
+      <a class="skope-footer__action skope-footer__dialog-trigger" href="{{ $footer.content_links.citation | strings.TrimPrefix "/" | relURL }}">{{ $footer.labels.citation }}</a>
+      <a class="skope-footer__action skope-footer__dialog-trigger" href="{{ $footer.content_links.terms | strings.TrimPrefix "/" | relURL }}">{{ $footer.labels.terms }}</a>
+      {{ $source := .Site.Params.website_source }}
+      {{ $revision := os.Getenv "HUGO_SITE_REVISION" }}
+      <a class="skope-footer__action" href="{{ $source }}{{ with $revision }}/tree/{{ . }}{{ end }}" target="_blank" rel="noopener noreferrer" aria-label="Website source{{ with os.Getenv "HUGO_SITE_BUILD_ID" }}, build {{ . }}{{ end }}">
+        <i class="fa-brands fa-github skope-footer__icon" aria-hidden="true"></i>
+        {{ with os.Getenv "HUGO_SITE_BUILD_ID" }}{{ $footer.labels.build }} {{ . }}{{ else }}{{ $footer.labels.source }}{{ end }}
+      </a>
+    </div>
+  </div>
+</footer>

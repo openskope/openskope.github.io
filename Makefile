@@ -5,6 +5,8 @@ export LOCAL_GID := $(shell id -g)
 export PREVIEW_PORT ?= 1313
 export FONT_UPDATE_LOCK
 export DOCSY_VERSION
+export HUGO_SITE_REVISION := $(shell git rev-parse HEAD)
+export HUGO_SITE_BUILD_ID := $(shell git describe --always --dirty)
 COMPOSE = docker compose
 RUN = $(COMPOSE) run --rm --no-deps --entrypoint sh -e HOME=/tmp -e npm_config_cache=/tmp/.npm -e FONT_UPDATE_LOCK -e RENDER_BASE_URL -e WORDPRESS_EXPORT -e IMPORT_OUTPUT hugo
 RENDER_BASE_URL ?= https://www.openskope.org/

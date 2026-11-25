@@ -14,6 +14,8 @@ services:
       HOME: /tmp
       npm_config_cache: /tmp/.npm
       HUGO_CACHEDIR: /tmp/hugo_cache
+      HUGO_SITE_REVISION: ${HUGO_SITE_REVISION:-}
+      HUGO_SITE_BUILD_ID: ${HUGO_SITE_BUILD_ID:-}
     entrypoint: sh
     command: ["-c", "exec hugo server --bind 0.0.0.0 --renderToMemory --noHTTPCache"]
     volumes:

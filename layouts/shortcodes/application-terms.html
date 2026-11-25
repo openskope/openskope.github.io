@@ -1,0 +1,2 @@
+{{ $policy := os.ReadFile "shared/web/application-policy.json" | transform.Unmarshal }}
+<p>{{ $policy.terms }}</p>

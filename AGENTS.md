@@ -19,6 +19,7 @@ should match link labels in slug form; retain legacy WordPress paths as aliases.
 - `packages/hugoautogen/`: generated workspace; regenerate with `make deps-pack`
 - `docs/migration/`: source checksum, page/media mapping and import review evidence
 - `data/fonts.json`, `assets/fonts/`, `static/fonts/`: pinned webfonts and licenses
+- `shared/web/`: authoritative shared footer content, CSS and tokens; see [maintenance](docs/footer.md)
 - `scripts/`, `Makefile`, `docker-compose.yml`: import, validation and container interface
 
 The original WordPress XML is private migration input, ignored by Git, and must
@@ -40,6 +41,22 @@ never overwrite reviewed content as part of routine builds.
 - Keep credentials, analytics keys and private export data out of commits and logs.
 - Do not rewrite historical claims as current facts. Record uncertain source
   links, dated statements and unavailable media for human review.
+
+## Shared content and styling
+
+- The static website owns reusable, shareable project content and styling in
+  `shared/web/`: acknowledgments, citation guidance/metadata, terms, and shared
+  design tokens and CSS. Keep one editable source; do not maintain competing
+  copies in the app. See [shared footer maintenance](docs/footer.md).
+- `skopeui` consumes reviewed bundles pinned to full Git commit SHAs, with local
+  checksums. Normal builds and browser rendering use local files, not a moving
+  branch, the live website, or another repository's build output.
+- The app owns application behavior: state, data interaction, dialogs, and consent
+  enforcement. Share content and styles without coupling Vue/Vuetify to Hugo/Docsy.
+- Keep dependencies one-way: website source to app bundle. This website must not
+  import app source or require an app build to render its shared content.
+- Update shared sources here, validate, commit, then advance the app's bundle pin
+  through review. Adding shared files requires an explicit bundle-contract update.
 
 ## Navigation
 
