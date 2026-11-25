@@ -9,3 +9,5 @@
 *.xml
 .DS_Store
 __pycache__/
+/.impeccable/config.local.json
+/.impeccable/hook.cache.json

@@ -14,11 +14,11 @@
 > See [project news and history]({{< relref "/news" >}}) for context, or use
 > the [SKOPE application page]({{< relref "/use-skope" >}}) to get started.
 
-<p style="text-align: center;">R. Kyle Bocinsky, Timothy A. Kohler, Adam Brin, Keith W. Kintigh,
+<p class="text-center">R. Kyle Bocinsky, Timothy A. Kohler, Adam Brin, Keith W. Kintigh,
 Bertram Ludäscher, Timothy McPhillips, Johnathan Rush
 2016-02-05 (updated 2016-11-04)</p>
 The SKOPE Prototype is a Web application that provides reconstructed precipitation and temperature data at high spatial and temporal resolutions for the last 2000 years for the Four Corners region of the southwestern United States (Arizona, Colorado, New Mexico, and Utah) and portions of adjoining states. Using SKOPE, one can obtain estimates of the annual precipitation, growing season (May-September) precipitation, water year (October-September) precipitation, and growing season Fahrenheit growing degree days (GDD), for any period between 1 C.E. and 2000 C.E. for any 800m x 800m grid cell in the region.
-<p style="text-align: center;"><a href='http://www.xkope.org/paleocar-browser/'>Run the SKOPE Prototype</a></p>
+<p class="text-center"><a href='http://www.xkope.org/paleocar-browser/'>Run the SKOPE Prototype</a></p>
 <strong>Using the Tool</strong>
 
 <strong><em>Navigate to the tool</em></strong>. Using a browser navigate to <a href='http://www.xkope.org/paleocar-browser/'>SKOPE prototype</a> (SKOPE 2016). Reconstructed data are available for the green-shaded portion of the initial map display. The region in the extreme southwest near Tijuana, Mexico, is outside the study area (even though it is shaded green).

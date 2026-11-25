@@ -17,7 +17,7 @@
 
 
 
-<p><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color"><strong style="color: rgb(18, 14, 225); background-color: rgba(0, 0, 0, 0);">The new version of  SKOPE including many new features was released </strong></mark><mark style="background-color:rgba(0, 0, 0, 0);color:#120ee1" class="has-inline-color"><strong>May  7, </strong></mark><mark style="background-color:rgba(0, 0, 0, 0);color:#120ee1" class="has-inline-color"><strong>2022.</strong></mark>  </p>
+<p><mark class="has-inline-color skope-announcement"><strong>The new version of  SKOPE including many new features was released </strong></mark><mark class="has-inline-color skope-announcement"><strong>May  7, </strong></mark><mark class="has-inline-color skope-announcement"><strong>2022.</strong></mark>  </p>
 
 
 

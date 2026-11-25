@@ -22,7 +22,7 @@
 
 
 
-<p id="introduction"><em><strong>I</strong></em><em style=""><b>ntroduction. </b></em>SKOPE is a Web application that provides easy graphical and analytical access to paleoenvironmental data. </p>
+<p id="introduction"><em><strong>I</strong></em><em><b>ntroduction. </b></em>SKOPE is a Web application that provides easy graphical and analytical access to paleoenvironmental data. </p>
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-<p><strong><em>SKOPE Data are Modeled</em></strong><em>.</em>&nbsp; It is important to recognize that the SKOPE datasets provide modeled, not measured, data values. Information about the models is provided in the dataset metadata and in publications referenced therein. To view the metadata click on the <img class="wp-image-690" style="width: 22px;" src='{{< siteurl "wp-content/uploads/2021/11/Warning-2.png" >}}' alt=""> icon (the red triangle enclosing an "!") displayed to the right of the dataset title.  We use that symbol to warn users that in interpreting SKOPE data, they should be aware of important information contained in the metadata including a discussion of the uncertainty associated with the modeled data.   In general, there are a number of interacting sources of uncertainty and it is not possible to provide a single quantitative measure of uncertainty (which in some cases can vary from year to year and spatial cell to spatial cell). In interpreting both the raw and summarized data provided by SKOPE, it is essential that uncertainty be taken into account.</p>
+<p><strong><em>SKOPE Data are Modeled</em></strong><em>.</em>&nbsp; It is important to recognize that the SKOPE datasets provide modeled, not measured, data values. Information about the models is provided in the dataset metadata and in publications referenced therein. To view the metadata click on the <img class="wp-image-690" width="22" src='{{< siteurl "wp-content/uploads/2021/11/Warning-2.png" >}}' alt=""> icon (the red triangle enclosing an "!") displayed to the right of the dataset title.  We use that symbol to warn users that in interpreting SKOPE data, they should be aware of important information contained in the metadata including a discussion of the uncertainty associated with the modeled data.   In general, there are a number of interacting sources of uncertainty and it is not possible to provide a single quantitative measure of uncertainty (which in some cases can vary from year to year and spatial cell to spatial cell). In interpreting both the raw and summarized data provided by SKOPE, it is essential that uncertainty be taken into account.</p>
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-<p><strong><em>Navigating within the app.</em></strong> Navigation is accomplished  through a dropdown menu accessed from the menu (hamburger) icon  <img class="wp-image-684" style="width: 40px;" src='{{< siteurl "wp-content/uploads/2021/11/Hamburger.png" >}}' alt="">to the left of the <strong>SKOPE</strong> title in the header.  </p>
+<p><strong><em>Navigating within the app.</em></strong> Navigation is accomplished  through a dropdown menu accessed from the menu (hamburger) icon  <img class="wp-image-684" width="40" src='{{< siteurl "wp-content/uploads/2021/11/Hamburger.png" >}}' alt="">to the left of the <strong>SKOPE</strong> title in the header.  </p>
 
 
 
@@ -66,11 +66,11 @@
 
 
 
-<p>The grey-highlighted entry in the menu shows the currently selected page: Select Dataset, Select Area, Visualize Data, or Analyze Data.  Pages other than Select Dataset display an orange navigation button, such as   <img class="wp-image-665" style="width: 110px;" src='{{< siteurl "wp-content/uploads/2021/10/Visualize-Data.png" >}}' alt="Visualize data"> , that can be used instead of the menu navigation.  On the Select Dataset page, clicking on an orange-underlined dataset title takes you immediately to the Select Area page. You can, at any point, return to choose a new study area or switch datasets.   You can also use the browser’s “back” button to return to earlier steps.</p>
+<p>The grey-highlighted entry in the menu shows the currently selected page: Select Dataset, Select Area, Visualize Data, or Analyze Data.  Pages other than Select Dataset display an orange navigation button, such as   <img class="wp-image-665" width="110" src='{{< siteurl "wp-content/uploads/2021/10/Visualize-Data.png" >}}' alt="Visualize data"> , that can be used instead of the menu navigation.  On the Select Dataset page, clicking on an orange-underlined dataset title takes you immediately to the Select Area page. You can, at any point, return to choose a new study area or switch datasets.   You can also use the browser’s “back” button to return to earlier steps.</p>
 
 
 
-<p>The <strong>LOAD SKOPE ANALYSIS</strong> button <img class="wp-image-687" style="width: 120px;" src='{{< siteurl "wp-content/uploads/2021/11/Upload-Analysis.png" >}}' alt="">, near the right margin of the header or in the menu,  allows you resume a previous&nbsp; analysis where you left off, assuming that you downloaded the analysis file from the Analyze Data Page before you exited SKOPE.&nbsp; Load Analysis restores the dataset, selected area, selected variable, and time range.</p>
+<p>The <strong>LOAD SKOPE ANALYSIS</strong> button <img class="wp-image-687" width="120" src='{{< siteurl "wp-content/uploads/2021/11/Upload-Analysis.png" >}}' alt="">, near the right margin of the header or in the menu,  allows you resume a previous&nbsp; analysis where you left off, assuming that you downloaded the analysis file from the Analyze Data Page before you exited SKOPE.&nbsp; Load Analysis restores the dataset, selected area, selected variable, and time range.</p>
 
 
 
@@ -86,7 +86,7 @@
 
 
 
-<p><img class="wp-image-635" style="width: 28px;" src='{{< siteurl "wp-content/uploads/2021/08/UG12.png" >}}' alt=""> <strong><em>View Metadata.</em></strong> Clicking on the <img class="wp-image-690" style="width: 22px;" src='{{< siteurl "wp-content/uploads/2021/11/Warning-2.png" >}}' alt=""> icon to the right of the dataset title opens a window that displays the dataset metadata. This icon is also available on other pages, displayed to the right of the dataset title, below the header.</p>
+<p><img class="wp-image-635" width="28" src='{{< siteurl "wp-content/uploads/2021/08/UG12.png" >}}' alt=""> <strong><em>View Metadata.</em></strong> Clicking on the <img class="wp-image-690" width="22" src='{{< siteurl "wp-content/uploads/2021/11/Warning-2.png" >}}' alt=""> icon to the right of the dataset title opens a window that displays the dataset metadata. This icon is also available on other pages, displayed to the right of the dataset title, below the header.</p>
 
 
 
@@ -122,7 +122,7 @@
 
 
 
-<p id="create-area-of-interest-geometry"><img class="wp-image-627" style="width: 121px;" src='{{< siteurl "wp-content/uploads/2021/08/UG4.png" >}}' alt=""><strong><em>Save or Restore your Area Selection.</em></strong> At any time, you can save your area selection (useful especially for painstakingly drawn polygons). This saves the selected area to your computer so that it can be reused in this or a later session.&nbsp;Download the selected area using the download icon in the upper right; upload the selected area in future sessions by using the upload button.  You can also compose your own area selection in GeoJSON format using long-lat coordinates.  Download a trial selection to see the format.)</p>
+<p id="create-area-of-interest-geometry"><img class="wp-image-627" width="121" src='{{< siteurl "wp-content/uploads/2021/08/UG4.png" >}}' alt=""><strong><em>Save or Restore your Area Selection.</em></strong> At any time, you can save your area selection (useful especially for painstakingly drawn polygons). This saves the selected area to your computer so that it can be reused in this or a later session.&nbsp;Download the selected area using the download icon in the upper right; upload the selected area in future sessions by using the upload button.  You can also compose your own area selection in GeoJSON format using long-lat coordinates.  Download a trial selection to see the format.)</p>
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-<p class="has-text-align-left"><strong><em>Run the Map Animation</em></strong>.&nbsp;<img class="wp-image-630" style="width: 200px;" src='{{< siteurl "wp-content/uploads/2021/08/UG7.png" >}}' alt="">  Using the Animation control bar (located above and to the right of the graph), the colored overlay of the value of the selected variable shows the spatial distribution of values for the entire mapped area, time step by time step. The legend is shown on the lower left of the map.&nbsp; As the map animation runs (once you press the play button), the year is displayed below the graph and a vertical orange line on the graph shows the current year.&nbsp; Clicking a location on the  graph changes the current year. You may run, pause, step forward or back a year, or go to the beginning or end of the interval using the animation control.&nbsp; &nbsp;If you wish, you can interactively drag or zoom the map display.&nbsp;It may be preferable to use a non-colored base map, such as Stamen Toner-Lite, for careful analysis of these maps; otherwise the base map colors may conflate the variable overlay coloring. You can&nbsp;change the base map using the globe icon in the upper right of the map.</p>
+<p class="has-text-align-left"><strong><em>Run the Map Animation</em></strong>.&nbsp;<img class="wp-image-630" width="200" src='{{< siteurl "wp-content/uploads/2021/08/UG7.png" >}}' alt="">  Using the Animation control bar (located above and to the right of the graph), the colored overlay of the value of the selected variable shows the spatial distribution of values for the entire mapped area, time step by time step. The legend is shown on the lower left of the map.&nbsp; As the map animation runs (once you press the play button), the year is displayed below the graph and a vertical orange line on the graph shows the current year.&nbsp; Clicking a location on the  graph changes the current year. You may run, pause, step forward or back a year, or go to the beginning or end of the interval using the animation control.&nbsp; &nbsp;If you wish, you can interactively drag or zoom the map display.&nbsp;It may be preferable to use a non-colored base map, such as Stamen Toner-Lite, for careful analysis of these maps; otherwise the base map colors may conflate the variable overlay coloring. You can&nbsp;change the base map using the globe icon in the upper right of the map.</p>
 
 
 
@@ -246,11 +246,11 @@
 
 
 
-<p><em><u>Save the graph and the graphed data to your computer.</u></em> The Download button <img class="wp-image-632" style="width: 113px;" src='{{< siteurl "wp-content/uploads/2021/08/UG9.png" >}}' alt="">&nbsp;will download to your browser, in a ZIP file: the graph (plot) in svg and png formats, the raw and transformed data values (timeseries) behind the graph in tabular (json and csv) format, a readme file, a file with summary statistics (summary.Statistics.json), and a file that saves all parameters used to generate the graph (request.json).&nbsp; Note that If the Areal Summary is the mean, then the raw data will be (default) mean values by time step, otherwise they will be median values by time step.&nbsp;</p>
+<p><em><u>Save the graph and the graphed data to your computer.</u></em> The Download button <img class="wp-image-632" width="113" src='{{< siteurl "wp-content/uploads/2021/08/UG9.png" >}}' alt="">&nbsp;will download to your browser, in a ZIP file: the graph (plot) in svg and png formats, the raw and transformed data values (timeseries) behind the graph in tabular (json and csv) format, a readme file, a file with summary statistics (summary.Statistics.json), and a file that saves all parameters used to generate the graph (request.json).&nbsp; Note that If the Areal Summary is the mean, then the raw data will be (default) mean values by time step, otherwise they will be median values by time step.&nbsp;</p>
 
 
 
-<p><em><u>Restore an Analysis State of the SKOPE Application</u></em>. If you have downloaded the graph metadata in a previous session with the app (see description immediately above), you can restore the SKOPE app to that state.&nbsp; To do this, extract the request.json file from the downloaded ZIP file (for example, drag it to your desktop).&nbsp; Then, on any page in the SKOPE app click on the upload SKOPE Analysis button <img class="wp-image-687" style="width: 150px;" src='{{< siteurl "wp-content/uploads/2021/11/Upload-Analysis.png" >}}' alt="">  (on the right &nbsp;of the header or from the menu) and load the request.json file from your computer.&nbsp; You cannot load the request.json file directly from the zip file.</p>
+<p><em><u>Restore an Analysis State of the SKOPE Application</u></em>. If you have downloaded the graph metadata in a previous session with the app (see description immediately above), you can restore the SKOPE app to that state.&nbsp; To do this, extract the request.json file from the downloaded ZIP file (for example, drag it to your desktop).&nbsp; Then, on any page in the SKOPE app click on the upload SKOPE Analysis button <img class="wp-image-687" width="150" src='{{< siteurl "wp-content/uploads/2021/11/Upload-Analysis.png" >}}' alt="">  (on the right &nbsp;of the header or from the menu) and load the request.json file from your computer.&nbsp; You cannot load the request.json file directly from the zip file.</p>
 
 
 

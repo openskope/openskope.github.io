@@ -4,7 +4,7 @@ The static website is authoritative for reusable project content and styling in
 `shared/web/`. Its version-1 bundle contains exactly:
 
 - `footer.json`: acknowledgments, copyright, action labels and website page paths
-- `tokens.json`: shared footer CSS custom-property values
+- `tokens.json`: shared font stacks and footer CSS custom-property values
 - `footer.css`: framework-neutral styling using those tokens
 - `application-policy.json`: citation guidance and application terms
 - `CITATION.cff`: canonical SKOPE application citation metadata
@@ -18,6 +18,32 @@ Hugo renders the bundle directly, including `/cite-skope/` and `/terms-of-use/`.
 The small `footer.html` adapter renders escaped text segments and explicit HTTPS
 links. `web-assets.html` generates fingerprinted CSS from tokens and styling.
 Only the Docsy gutter correction belongs in the website's own footer SCSS.
+
+## Validation and styling ownership
+
+`make web-assets-check` validates schema version 1, required content/labels,
+HTTPS acknowledgment links, local policy routes, token references, footer text
+contrast in normal/hover states, and citation fields. It runs before production
+renders and preview startup. `make content-test` includes rejection tests for
+invalid bundles and missing/duplicate rendered footer assets. GitHub Pages CI
+runs these through its existing render and test steps.
+
+`make site-check` also validates the source bundle and checks every rendered
+non-redirect page for exactly one shared footer and fingerprinted stylesheet,
+acknowledgment text/links, copyright and policy actions. It checks the published
+policy text and CFF download against their sources, including subpath builds.
+Hugo parses the full citation YAML during rendering.
+
+Shared font stacks live in `tokens.json`; the footer and website typography use
+those CSS variables. Website theme colors live in
+`assets/scss/_variables_project.scss`, and site rules reuse those Sass variables.
+Content uses Bootstrap alignment/weight classes and the small set of semantic
+classes in `_styles_project.scss`; image display sizes use HTML width attributes.
+Edit theme rules rather than adding inline colors or disabling focus outlines.
+
+Footer foreground, background and hover-background tokens use six-digit hex
+colors so the validator can enforce at least 4.5:1 contrast. Adding optional
+tokens to the existing JSON file preserves the v1 five-file bundle contract.
 
 ## One-way dependency
 

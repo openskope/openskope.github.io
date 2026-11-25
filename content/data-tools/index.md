@@ -18,7 +18,7 @@ A key project effort is <a title="Paleoenvironmental Reconstruction (PaleoCAR)" 
 
 <a title="FedData" href='{{< relref "/feddata" >}}'><em>FedData</em></a> is a package for the <em>R</em> statistical environment that allows for automated access to several federated data sources. The package is under active development by SKOPE researchers.
 
-<a style="color: #ea9629; text-decoration-line: underline; outline: 0px;" title="Risk Landscapes" href='{{< relref "/risk-landscapes" >}}'>Risk Landscapes</a> use high spatial resolution temperature and precipitation data (both historic and prehistoric--from PaleoCAR) to assess the spatial distribution, through time of the local risk of crop failure from runoff and dry farming technologies.
+<a title="Risk Landscapes" href='{{< relref "/risk-landscapes" >}}'>Risk Landscapes</a> use high spatial resolution temperature and precipitation data (both historic and prehistoric--from PaleoCAR) to assess the spatial distribution, through time of the local risk of crop failure from runoff and dry farming technologies.
 
 ## More environmental data resources
 

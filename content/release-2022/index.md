@@ -14,7 +14,7 @@
 
 
 
-<p><strong>7 May 2022.  <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-red-color">We have released the production version of SKOPE (Synthesizing Knowledge of Past Environments)</mark></strong>, an NSF-funded, online tool that enables users to easily explore, visualize, analyze, and synthesize knowledge about past environments.&nbsp; Users set a location and time period of interest and SKOPE provides free analytical and graphical access to long-term, high-resolution environmental data reaching back more than 2000 years. We expect that this tool may be of value to <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-red-color"><strong>archaeologists</strong>, <strong>ecologists, historians, geographers, planners and other professionals</strong></mark> interested in past landscapes or in comparing environmental conditions at the same place at different times or between different places.</p>
+<p><strong>7 May 2022.  <mark class="has-inline-color has-red-color skope-announcement">We have released the production version of SKOPE (Synthesizing Knowledge of Past Environments)</mark></strong>, an NSF-funded, online tool that enables users to easily explore, visualize, analyze, and synthesize knowledge about past environments.&nbsp; Users set a location and time period of interest and SKOPE provides free analytical and graphical access to long-term, high-resolution environmental data reaching back more than 2000 years. We expect that this tool may be of value to <mark class="has-inline-color has-red-color skope-announcement"><strong>archaeologists</strong>, <strong>ecologists, historians, geographers, planners and other professionals</strong></mark> interested in past landscapes or in comparing environmental conditions at the same place at different times or between different places.</p>
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-<p>Please, take a few minutes to experiment with the <a href='https://app.openskope.org/'><strong><span style="color:#0013a3" class="has-inline-color">SKOPE App</span></strong></a>. Please also pass on this announcement to other individuals or user communities that might be interested.</p>
+<p>Please, take a few minutes to experiment with the <a href='https://app.openskope.org/'><strong><span class="has-inline-color">SKOPE App</span></strong></a>. Please also pass on this announcement to other individuals or user communities that might be interested.</p>
 
 
 

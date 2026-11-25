@@ -22,6 +22,7 @@ the container; no host Hugo, Go, Node, npm or Python installation is required.
 ```sh
 make render                    # production export in public/
 make check                     # render, dependency/import tests, local link/media checks
+make web-assets-check          # shared content, token and footer contrast validation
 make toolchain-status          # installed tools and dependencies
 make shell                     # container shell
 ```

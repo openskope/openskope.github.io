@@ -4,25 +4,98 @@ import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 from urllib.parse import unquote, urljoin, urlsplit
+from check_web_assets import validate
 
 class Links(HTMLParser):
     def __init__(self):
         super().__init__(); self.links=[]; self.ids=set()
+        self.footers = 0
+        self.shared_footers = 0
+        self.in_footer = False
+        self.footer_text = []
+        self.footer_links = []
+        self.stylesheets = []
+        self.redirect = False
+        self.text = []
     def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
+        if tag == 'footer':
+            self.footers += 1
+            self.shared_footers += 'skope-footer' in attrs.get('class', '').split()
+            self.in_footer = True
+        if tag == 'a' and self.in_footer:
+            self.footer_links.append(attrs.get('href'))
+        if tag == 'link' and 'stylesheet' in attrs.get('rel', '').split():
+            self.stylesheets.append(attrs.get('href', ''))
+        if tag == 'meta' and attrs.get('http-equiv', '').lower() == 'refresh':
+            self.redirect = True
         if attrs.get('id'): self.ids.add(attrs['id'])
         if tag=='a' and attrs.get('name'): self.ids.add(attrs['name'])
         for key in ('href','src'):
             if attrs.get(key): self.links.append((tag,key,attrs[key]))
 
+    def handle_endtag(self, tag):
+        if tag == 'footer':
+            self.in_footer = False
+
+    def handle_data(self, data):
+        self.text.append(data)
+        if self.in_footer:
+            self.footer_text.append(data)
+
+
+def check_footer(parser, footer, prefix):
+    """Aliases redirect; every actual page must render the shared footer once."""
+    if parser.redirect:
+        return []
+    errors = []
+    if parser.footers != 1 or parser.shared_footers != 1:
+        errors.append('Expected exactly one shared footer')
+    styles = [href for href in parser.stylesheets
+              if re.fullmatch(re.escape(prefix) + r'/css/skope-footer\.min\.[a-f0-9]{64}\.css', href)]
+    if len(styles) != 1:
+        errors.append('Expected exactly one fingerprinted shared footer stylesheet')
+    def normalized(value):
+        return ' '.join(value.split())
+
+    actual = normalized(''.join(parser.footer_text))
+    for paragraph in footer['acknowledgments']:
+        if normalized(''.join(segment['text'] for segment in paragraph)) not in actual:
+            errors.append('Missing shared acknowledgment text')
+        for segment in paragraph:
+            if 'href' in segment and segment['href'] not in parser.footer_links:
+                errors.append(f'Missing acknowledgment link: {segment["href"]}')
+    if footer['copyright']['holder'] not in actual:
+        errors.append('Missing shared copyright holder')
+    for name in ('citation', 'terms'):
+        if (prefix + footer['content_links'][name] not in parser.footer_links
+                or footer['labels'][name] not in actual):
+            errors.append(f'Missing shared footer action: {name}')
+    return errors
+
 
 def check(output, base_url):
+    try:
+        footer = validate(Path('shared/web'))
+    except (ValueError, OSError) as error:
+        print(f'Shared web assets: {error}')
+        return 1
     report=json.loads(Path('docs/migration/wordpress-import.json').read_text())
     base=urlsplit(base_url); prefix=base.path.rstrip('/')
     errors=[]; pages=list(output.rglob('*.html')); parsed={}
     for path in pages:
         parser=Links(); parser.feed(path.read_text()); parsed[path]=parser
+        errors.extend(f'{path}: {error}' for error in check_footer(parser, footer, prefix))
+    policy = json.loads(Path('shared/web/application-policy.json').read_text())
+    for name, field in [('citation', 'citationGuidance'), ('terms', 'terms')]:
+        path = output / footer['content_links'][name].strip('/') / 'index.html'
+        if path not in parsed or ' '.join(policy[field].split()) not in ' '.join(''.join(parsed[path].text).split()):
+            errors.append(f'Missing shared policy text: {path}')
+    citation = output / 'citation/CITATION.cff'
+    if not citation.is_file() or citation.read_bytes() != Path('shared/web/CITATION.cff').read_bytes():
+        errors.append('Published CITATION.cff differs from the shared source')
     for entry in report['published_pages']:
         path=output/entry['path']/'index.html'
         if not path.is_file(): errors.append(f'Missing imported page: {path}')

@@ -93,5 +93,11 @@
       "User guide punctuation normalization and home figure placement"
     ],
     "policy": "Preserve authored intent; no silent summaries. Retain source IDs and record later deliberate revisions in Git."
+  },
+  "styling_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "Replace inline presentation in ten content files with central theme classes; preserve all authored wording, links, source IDs and URLs.",
+    "presentation": "Announcements and links use the site link color; alignment and normal text weight use Bootstrap utilities; reference indentation and presentation line height use site classes. Image display widths move to HTML width attributes.",
+    "accessibility": "Remove the Risk Landscapes inline outline suppression and orange link override so the central link and keyboard-focus rules apply."
   }
 }

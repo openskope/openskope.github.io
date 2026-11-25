@@ -1,8 +1,7 @@
 :root { --skope-navbar-height: 5rem; }
-body { font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif; }
 h1, h2, h3 { text-wrap: balance; }
 .td-content { max-width: 76ch; line-height: 1.75; }
-.td-content h1, .td-content h2, .td-content h3, .skope-home-heading h1, .skope-explore h2 { color: #800000; }
+.td-content h1, .td-content h2, .td-content h3, .skope-home-heading h1, .skope-explore h2 { color: $primary; }
 .td-content img { max-width: 100%; height: auto; }
 .td-content figure { margin: 2rem 0; }
 .td-content figcaption { color: #4b4b4b; font-size: .95rem; }
@@ -12,12 +11,12 @@ h1, h2, h3 { text-wrap: balance; }
 .td-navbar.skope-navbar {
   min-height: var(--skope-navbar-height);
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: $light;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-bottom: 1px solid #b9bec8;
-  color: #102a63;
+  color: $secondary;
 }
 .skope-navbar-container {
   display: flex;
@@ -29,16 +28,16 @@ h1, h2, h3 { text-wrap: balance; }
   padding: .5rem clamp(1rem, 2vw, 2rem);
 }
 .skope-navbar .skope-brand { display: flex; flex-direction: column; align-items: flex-start; margin: 0; padding: 0; text-decoration: none; min-width: 0; }
-.skope-brand__title { font-family: "Bitter", Georgia, serif; font-size: 2.75rem; line-height: 1; font-weight: 700; color: #800000; }
-.skope-brand__subtitle { font-family: "Bitter", Georgia, serif; font-size: 1rem; font-weight: 700; line-height: 1.25; color: #102a63; white-space: nowrap; }
-.skope-navbar .skope-menu-toggle { display: block; margin-inline-start: auto; padding: .5rem .75rem; border: 1px solid #102a63; border-radius: .25rem; color: #102a63; font-size: 1rem; background: #fff; }
+.skope-brand__title { font-family: $font-family-brand; font-size: 2.75rem; line-height: 1; font-weight: 700; color: $primary; }
+.skope-brand__subtitle { font-family: $font-family-brand; font-size: 1rem; font-weight: 700; line-height: 1.25; color: $secondary; white-space: nowrap; }
+.skope-navbar .skope-menu-toggle { display: block; margin-inline-start: auto; padding: .5rem .75rem; border: 1px solid $secondary; border-radius: .25rem; color: $secondary; font-size: 1rem; background: #fff; }
 .skope-navigation { flex-basis: 100%; padding-top: .75rem; }
 .skope-navigation.show { display: flex; flex-direction: column; align-items: stretch; gap: .75rem; }
 .skope-navbar .navbar-nav { flex-direction: column; align-items: stretch; gap: .25rem; }
-.skope-navbar .nav-link { color: #102a63; font-size: .9375rem; font-weight: 500; padding: .5rem .625rem; border-radius: .25rem; }
-.skope-navbar .nav-link:hover, .skope-navbar .nav-link.active { color: #800000; background: rgba(255,255,255,.9); text-decoration: underline; text-underline-offset: .25em; }
-.skope-navbar .nav-link.skope-launch { color: #fff; background: #102a63; text-align: center; }
-.skope-navbar-search .td-search__input { background-color: rgba(255,255,255,.95); color: #102a63; border: 1px solid #8a93a6; }
+.skope-navbar .nav-link { color: $secondary; font-size: .9375rem; font-weight: 500; padding: .5rem .625rem; border-radius: .25rem; }
+.skope-navbar .nav-link:hover, .skope-navbar .nav-link.active { color: $primary; background: rgba(255,255,255,.9); text-decoration: underline; text-underline-offset: .25em; }
+.skope-navbar .nav-link.skope-launch { color: #fff; background: $secondary; text-align: center; }
+.skope-navbar-search .td-search__input { background-color: rgba(255,255,255,.95); color: $secondary; border: 1px solid #8a93a6; }
 @media (min-width: 1200px) {
   .skope-navbar-container { flex-wrap: nowrap; }
   .skope-navbar .skope-menu-toggle { display: none; }
@@ -73,7 +72,7 @@ h1, h2, h3 { text-wrap: balance; }
 .skope-home-copy > p:empty { display: none; }
 .skope-explore { margin: 2.5rem auto 0; border-top: 1px solid #d8d8d8; padding-top: 1.5rem; }
 .skope-explore ul { display: flex; flex-wrap: wrap; gap: .75rem 3rem; list-style: none; padding: 0; margin-bottom: 0; }
-a:focus-visible, button:focus-visible { outline: 3px solid #17366e; outline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid $link-color; outline-offset: 4px; }
 @media (min-width: 1200px) {
   .skope-home .td-content { max-width: none; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: clamp(2rem, 4vw, 4rem); align-items: start; }
   .skope-home-copy { max-width: 72ch; }
@@ -82,3 +81,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid #17366e; outline-offs
 
 // Docsy's outer container has Bootstrap gutters; the shared footer spans them.
 .td-footer.skope-footer { width: auto; min-height: 0; margin-inline: calc(var(--bs-gutter-x, 1.5rem) * -.5); }
+
+// Imported prose keeps its wording; presentation follows the site theme.
+.td-content .skope-announcement { color: $link-color; background: transparent; }
+.td-content .skope-reference-note { padding-inline-start: 1.875rem; }
+.td-content .skope-reference-note--deep { padding-inline-start: 2.5rem; }
+.td-content .skope-presentation-reference { line-height: 1.5; }

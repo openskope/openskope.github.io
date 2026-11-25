@@ -13,7 +13,7 @@ RENDER_BASE_URL ?= https://www.openskope.org/
 WORDPRESS_EXPORT ?= /src/skope.WordPress.2026-11-25.xml
 IMPORT_OUTPUT ?= /src/tmp/wordpress-import
 export RENDER_BASE_URL WORDPRESS_EXPORT IMPORT_OUTPUT
-.PHONY: help deps-fonts bootstrap build serve stop render shell toolchain-status deps-docsy deps-pack deps-lock deps-test content-test site-check check import-wordpress media-fetch
+.PHONY: help deps-fonts bootstrap build serve stop render shell toolchain-status deps-docsy deps-pack deps-lock deps-test content-test web-assets-check site-check check import-wordpress media-fetch
 .NOTPARALLEL:
 
 help:
@@ -27,14 +27,14 @@ bootstrap:
 build:
 	$(COMPOSE) build --pull hugo
 
-serve: build
+serve: build web-assets-check
 	$(COMPOSE) up -d --renew-anon-volumes hugo
 	@echo 'Preview: http://localhost:$(PREVIEW_PORT); stop with make stop'
 
 stop:
 	$(COMPOSE) down -v
 
-render: build
+render: build web-assets-check
 	@running=$$($(COMPOSE) ps --status running -q hugo) || exit $$?; \
 	 test -z "$$running" || { echo 'Stop the preview before rendering, or use a separate checkout.' >&2; exit 1; }
 	$(RUN) -c 'hugo --gc --cleanDestinationDir --baseURL "$$RENDER_BASE_URL"'
@@ -59,6 +59,9 @@ deps-test:
 
 content-test:
 	$(RUN) -c 'python3 -m unittest discover -s tests -v'
+
+web-assets-check:
+	$(RUN) -c 'python3 scripts/check_web_assets.py'
 
 site-check:
 	$(RUN) -c 'python3 scripts/check_site.py public --base-url "$$RENDER_BASE_URL"'
