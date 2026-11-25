@@ -29,7 +29,7 @@ Choose a dataset and study area, then visualize or analyze the data.
 {{< skope-actions >}}
 
 </div>
-{{< skope-figure src="wp-content/uploads/2021/11/Select-Area.png" alt="Study-area selection in the SKOPE User Guide: a yellow polygon marks an area on the map around Chaco Canyon." eager=true caption="Study-area selection, illustrated in the SKOPE User Guide." class="skope-use-launch__figure" >}}
+{{< skope-figure src="images/screenshots/paleocar-v3-chaco-select-area-2026-11-25.png" alt="Current SKOPE Select Area screen showing the Chaco study-area polygon over PaleoCAR V3 precipitation data." eager=true caption="Study-area selection with PaleoCAR V3 and the Chaco example area (staging preview)." class="skope-use-launch__figure" >}}
 
 </section>
 

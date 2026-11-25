@@ -1,11 +1,15 @@
-{{- /* Archived URLs stay in static/. Hugo creates disposable web derivatives. */ -}}
+{{- /* Archived media retain their URLs; current screenshots live in assets/. */ -}}
 {{- $path := .src -}}
-{{- $image := resources.Get (printf "legacy-images/%s" (strings.TrimPrefix "wp-content/uploads/" $path)) -}}
-{{- if not $image }}{{ errorf "Missing archived image %q on %s" $path .page.File.Path }}{{ end -}}
+{{- $archived := strings.HasPrefix $path "wp-content/uploads/" -}}
+{{- $asset := $path -}}
+{{- if $archived }}{{ $asset = printf "legacy-images/%s" (strings.TrimPrefix "wp-content/uploads/" $path) }}{{ end -}}
+{{- $image := resources.Get $asset -}}
+{{- if not $image }}{{ errorf "Missing image %q on %s" $path .page.File.Path }}{{ end -}}
 {{- $width := $image.Width -}}
 {{- with .width }}{{ $width = int . }}{{ end -}}
 {{- $height := int (math.Round (mul (div (float $image.Height) $image.Width) $width)) -}}
 {{- $src := $path | relURL -}}
+{{- if not $archived }}{{ $src = $image.RelPermalink }}{{ end -}}
 {{- $srcset := slice -}}
 {{- if and (gt $width 200) (ne $image.MediaType.SubType "gif") -}}
   {{- $largest := math.Min $image.Width 1920 | int -}}

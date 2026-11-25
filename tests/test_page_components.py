@@ -88,16 +88,18 @@ title: Mixed headings
             (root / 'layouts/shortcodes').mkdir(parents=True)
             (root / 'layouts/partials/skope').mkdir(parents=True)
             (root / 'assets/legacy-images').mkdir(parents=True)
+            (root / 'assets/screenshots').mkdir(parents=True)
             for name in ('skope-figure', 'legacy-image'):
                 shutil.copyfile(ROOT / f'layouts/shortcodes/{name}.html', root / f'layouts/shortcodes/{name}.html')
             shutil.copyfile(ROOT / 'layouts/partials/skope/image.html', root / 'layouts/partials/skope/image.html')
             shutil.copyfile(ROOT / 'static/wp-content/uploads/2018/05/cropped-AltHeadeID-1-32x32.png', root / 'assets/legacy-images/fixture.png')
+            shutil.copyfile(root / 'assets/legacy-images/fixture.png', root / 'assets/screenshots/fixture.png')
             (root / 'hugo.yaml').write_text('baseURL: https://example.org/preview/\n')
             (root / 'layouts/home.html').write_text('{{ .Content }}')
             (root / 'content/_index.md').write_text('''---
 title: Figure fixture
 ---
-{{< skope-figure src="wp-content/uploads/fixture.png" alt="Chart" width="320" caption="**Chart caption**" align="right" class="fixture-figure" eager=true link="wp-content/uploads/original.png" >}}
+{{< skope-figure src="screenshots/fixture.png" alt="Chart" width="320" caption="**Chart caption**" align="right" class="fixture-figure" eager=true link="wp-content/uploads/original.png" >}}
 
 An inline icon {{< legacy-image src="wp-content/uploads/fixture.png" alt="" width="22" >}} stays inline.
 ''')
@@ -108,7 +110,7 @@ An inline icon {{< legacy-image src="wp-content/uploads/fixture.png" alt="" widt
             self.assertEqual(output.count('<img '), 2)
             self.assertIn('class="skope-figure alignright fixture-figure"', output)
             self.assertIn('<figcaption><strong>Chart caption</strong></figcaption>', output)
-            self.assertIn('srcset="/preview/legacy-images/', output)
+            self.assertIn('srcset="/preview/screenshots/', output)
             self.assertIn('loading="eager"', output)
             self.assertIn('<a href="/preview/wp-content/uploads/original.png">', output)
             self.assertIn('alt="Chart"', output)
