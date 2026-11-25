@@ -10,7 +10,7 @@ As a part of a recent  NSF-funded CNH project (Nelson et al. 2011), The Comple
 
 To start, we  visualize the environment in any given year in terms of a map that displays, for each point in the map, how that year's growing season precipitation deviates from the long-term average for that point.  (Our assumption is people living in these locations have developed appropriate technologies to deal with their local environments.)  One such map (for 1934) is shown below.
 
-<a href='{{< siteurl "wp-content/uploads/2015/03/RiskLandscape.png" >}}'><img class="alignnone size-large wp-image-122" src='{{< siteurl "wp-content/uploads/2015/03/RiskLandscape-1024x615.png" >}}' alt="RiskLandscape" width="604" height="363" /></a>
+<a href='{{< siteurl "wp-content/uploads/2015/03/RiskLandscape.png" >}}'>{{< legacy-image src="wp-content/uploads/2015/03/RiskLandscape-1024x615.png" alt="Risk Landscapes visualization of agricultural risk across the study region." class="alignnone size-large wp-image-122" width="604" >}}</a>
 
 <strong>Growing Season Precipitation Deviations from the Long-term average, Arizona and New Mexico, 1934.</strong>
 
@@ -18,7 +18,7 @@ This map displays, for 1934, each map pixel's deviations from that specific loc
 
 To assess the risk landscape from the standpoint of a given actor, we need to see, over the long run,  what locations have precipitation deviations that are <em>commonly</em> anti-correlated with the location of our actor.  In particular we want to know what locations would be favorable when the actor's location is notably unfavorable, and <em>vice versa</em>.  Locations that consistently show opposite patterns of this sort would potentially be beneficial trade partners.
 
-We are now extending  this analysis into the past using high spatial resolution temperature and precipitation data (both historic and prehistoric--derived from <a title="Paleoenvironmental Reconstruction (PaleoCAR)" href='{{< relref "/paleocar" >}}'>PaleoCAR</a>) to assess the spatial distribution, through time of the local risk of crop failure from runoff and dry farming technologies.
+We are now extending  this analysis into the past using high spatial resolution temperature and precipitation data (both historic and prehistoric--derived from [PaleoCAR]({{< relref "/paleocar" >}} "Paleoenvironmental Reconstruction (PaleoCAR)")) to assess the spatial distribution, through time of the local risk of crop failure from runoff and dry farming technologies.
 
 Nelson, Margaret C, John Anderies, Michelle Hegmon, Jon Norberg. 2011. CNH: The Complexities of Ecological And Social Diversity: A Long-Term Perspective.  National Science Foundation $1,499,551. (BCS 1113991) 9/1/2011-2/28/15
 

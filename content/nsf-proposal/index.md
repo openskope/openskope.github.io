@@ -9,19 +9,15 @@
   ]
 }
 
+## **RIDIR: Collaborative Research: Developing and Deploying SKOPE: Synthesizing Knowledge of Past Environments** {.text-center}
 
-<h4 class="text-center"><strong>RIDIR: Collaborative Research:
-Developing and Deploying SKOPE:
-Synthesizing Knowledge of Past Environments</strong></h4>
 <p class="text-center">Keith Kintigh &amp; Ann Kinzig (Arizona State University) NSF 1637189
 Bertram Ludäscher, Timothy McPhillips, &amp; Shaowen Wang
 (University of Illinois Urbana-Champaign) NSF 1637155
 Timothy Kohler &amp; R. Kyle Bocinsky (Washington State University) NSF 1637171</p>
 
-
 <hr />
 <p class="text-center"><strong><a href='{{< siteurl "wp-content/uploads/2016/10/SKOPE-II-NSF-Final-Proposal-for-the-Web.pdf" >}}' target="_blank">Click here for a PDF of SKOPE NSF Proposal</a></strong></p>
-
 
 <hr />
 <p class="text-center"><strong>Project Summary </strong></p>

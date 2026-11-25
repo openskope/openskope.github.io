@@ -7,13 +7,44 @@
   "weight": 30,
   "aliases": [
     "/publications-presentations/"
-  ]
+  ],
+  "body_class": "skope-research-page"
 }
 
-<h4><a href='{{< relref "/publications" >}}'>Publications</a></h4>
-<h4><a href='{{< relref "/presentations" >}}'>Presentations</a></h4>
-<h4><a href='{{< relref "/prototype-overview" >}}'>SKOPE Prototype</a></h4>
-<h4><a href='{{< relref "/yesworkflow" >}}'>YesWorkflow</a></h4>
+<div class="skope-page-intro">
+
+Publications, presentations, and tools from the SKOPE project.
+
+</div>
+
+{{< skope-actions >}}
+
+<div class="skope-research-outputs">
+
+<section aria-labelledby="skope-publications-heading">
+
+## [Publications]({{< relref "/publications" >}}) {#skope-publications-heading}
+
+Browse research publications and supporting references.
+
+</section>
+<section aria-labelledby="skope-presentations-heading">
+
+## [Presentations]({{< relref "/presentations" >}}) {#skope-presentations-heading}
+
+Explore talks and presentations from the project.
+
+</section>
+
+</div>
+
+<section class="skope-research-software" aria-labelledby="skope-workflow-heading">
+
+## [YesWorkflow]({{< relref "/yesworkflow" >}}) {#skope-workflow-heading}
+
+Explore the project’s work on computational workflows and provenance.
+
+</section>
 
 ## Related pages
 

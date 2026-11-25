@@ -1,0 +1,6 @@
+<div class="skope-actions">
+  {{- $page := .page -}}
+  {{- range .items | default (slice "launch" "guide") -}}
+    {{ partial "skope/action.html" (dict "page" $page "action" .) }}
+  {{- end -}}
+</div>

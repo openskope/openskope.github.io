@@ -24,6 +24,9 @@ Kintigh, Keith W., Timothy Kohler, Bertram Ludäscher, Katherine Spielmann, and 
 McPhillips, Timothy, Tianhong Song, Tyler Kolisnik, <span class="skope-presentation-reference">Steve Aulenbach, Khalid Belhajjame, Kyle Bocinsky, Yang Cao, Fernando Chiriga, Saumen Dey, Juliana Freire, Deborah Huntzinger, Christopher Jones, David Koop, Paolo Missier, Mark Schildhauer, Christopher Schwalm, Yaxing Wei, James Cheney, Mark Bieda, and Bertram Ludäscher. </span><a href='http://www.slideshare.net/ludaesch/yesworkflow-how-to-render-a-script-as-a-workflow-in-half-an-hour' target="_blank" rel="noopener">YesWorkflow: A User-Oriented, Language-Independent Tool for Recovering Workflow Information from Scripts.</a> 10th Intl. Digital Curation Conference (IDCC) 30 Euston Square, London, UK. 10 February 2015.
 
 </div>
+
 </div>
+
 </div>
+
 </div>

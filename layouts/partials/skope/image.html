@@ -1,0 +1,23 @@
+{{- /* Archived URLs stay in static/. Hugo creates disposable web derivatives. */ -}}
+{{- $path := .src -}}
+{{- $image := resources.Get (printf "legacy-images/%s" (strings.TrimPrefix "wp-content/uploads/" $path)) -}}
+{{- if not $image }}{{ errorf "Missing archived image %q on %s" $path .page.File.Path }}{{ end -}}
+{{- $width := $image.Width -}}
+{{- with .width }}{{ $width = int . }}{{ end -}}
+{{- $height := int (math.Round (mul (div (float $image.Height) $image.Width) $width)) -}}
+{{- $src := $path | relURL -}}
+{{- $srcset := slice -}}
+{{- if and (gt $width 200) (ne $image.MediaType.SubType "gif") -}}
+  {{- $largest := math.Min $image.Width 1920 | int -}}
+  {{- $sizes := slice $largest -}}
+  {{- range slice 320 640 960 1280 }}{{ if lt . $largest }}{{ $sizes = $sizes | append . }}{{ end }}{{ end -}}
+  {{- range $sizes -}}
+    {{- $variant := $image.Resize (printf "%dx webp q90" .) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink $variant.Width) -}}
+    {{- if eq . $largest }}{{ $src = $variant.RelPermalink }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .alt }}" width="{{ $width }}" height="{{ $height }}"
+  {{ with .class }}class="{{ . }}"{{ end }}
+  {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(min-width: 1200px) 760px, (min-width: 768px) 75vw, 100vw"{{ end }}
+  {{ if .eager }}loading="eager"{{ else }}loading="lazy"{{ end }} decoding="async">

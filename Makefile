@@ -13,11 +13,13 @@ RENDER_BASE_URL ?= https://www.openskope.org/
 WORDPRESS_EXPORT ?= /src/skope.WordPress.2026-11-25.xml
 IMPORT_OUTPUT ?= /src/tmp/wordpress-import
 export RENDER_BASE_URL WORDPRESS_EXPORT IMPORT_OUTPUT
-.PHONY: help deps-fonts bootstrap build serve stop render shell toolchain-status deps-docsy deps-pack deps-lock deps-test content-test web-assets-check site-check check import-wordpress media-fetch
+.PHONY: help deps-fonts bootstrap build serve stop logs status render shell toolchain-status deps-docsy deps-pack deps-lock deps-test content-test citation-sync web-assets-check site-check check import-wordpress media-fetch
 .NOTPARALLEL:
 
 help:
 	@echo "serve: local preview; stop: stop preview; check: build and validate"
+	@echo "logs: preview output; status: preview container status"
+	@echo "citation-sync: refresh GitHub's root citation from the shared source"
 	@echo "render: export to public/; toolchain-status: inspect installed versions"
 	@echo "See README.md for dependency upgrades and migration commands."
 
@@ -33,6 +35,12 @@ serve: build web-assets-check
 
 stop:
 	$(COMPOSE) down -v
+
+logs:
+	$(COMPOSE) logs --tail=100 hugo
+
+status:
+	$(COMPOSE) ps
 
 render: build web-assets-check
 	@running=$$($(COMPOSE) ps --status running -q hugo) || exit $$?; \
@@ -62,6 +70,9 @@ content-test:
 
 web-assets-check:
 	$(RUN) -c 'python3 scripts/check_web_assets.py'
+
+citation-sync:
+	$(RUN) -c 'cp shared/web/CITATION.cff CITATION.cff'
 
 site-check:
 	$(RUN) -c 'python3 scripts/check_site.py public --base-url "$$RENDER_BASE_URL"'

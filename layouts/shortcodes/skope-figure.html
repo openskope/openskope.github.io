@@ -1,0 +1,8 @@
+{{- /* Caption Markdown is inline; image processing stays shared with inline icons. */ -}}
+<figure class="skope-figure{{ with .Get "align" }} align{{ . }}{{ end }}{{ with .Get "class" }} {{ . }}{{ end }}">
+  {{- $image := dict "page" .Page "src" (.Get "src") "alt" (.Get "alt") "width" (.Get "width") "class" (.Get "image-class") "eager" (.Get "eager") -}}
+  {{- with .Get "link" }}<a href="{{ . | relURL }}">{{ end -}}
+  {{- partial "skope/image.html" $image -}}
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- with .Get "caption" }}<figcaption>{{ $.Page.RenderString (dict "display" "inline") . }}</figcaption>{{ end -}}
+</figure>

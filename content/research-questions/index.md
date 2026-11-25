@@ -9,7 +9,6 @@
   ]
 }
 
-
 <strong>SKOPE Stories: Examples of Questions SKOPE Should Be Able to Address</strong>
 
 An initial project effort was to determine what environmental variables, units of temporal and spatial resolution, and forms of desirable output should be prioritized for inclusion in SKOPE. SKOPE Project Team members organized two needs assessment workshops to elicit this information. We asked researchers with a demonstrated interest in historical processes and their relationships to changing environmental conditions to suggest research problems of particular interest. Researchers in both academic and applied professional positions participated in these user-community workshops. Among the professionals who attended were archaeologists, historians, geographers, hydrologists, and ecologists. What follows here is a sample of suggested research questions that would benefit from SKOPE Project undertakings.

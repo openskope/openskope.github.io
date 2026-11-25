@@ -1,11 +1,8 @@
 {{ define "main" }}
-<main id="td-main-content" class="container skope-home">
+<div tabindex="-1" id="td-main-content" class="container skope-home">
   <div class="skope-home-heading">
     <h1>{{ .Title }}</h1>
-    <div class="skope-actions">
-      <a class="btn btn-primary" href="https://app.openskope.org">Launch SKOPE</a>
-      <a class="btn btn-outline-primary" href="{{ relref . "/users-guide" }}">Read the guide</a>
-    </div>
+    {{ partial "skope/actions.html" (dict "page" .) }}
   </div>
   <div class="td-content">{{ .Content }}</div>
   <nav class="skope-explore" aria-label="Explore SKOPE">
@@ -16,5 +13,5 @@
     {{ end }}
     </ul>
   </nav>
-</main>
+</div>
 {{ end }}

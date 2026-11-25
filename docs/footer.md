@@ -14,6 +14,12 @@ metadata retains its existing release, authors and DOI. Edit these sources here,
 not consumer copies. `CITATION.cff` describes the application, not this website.
 The original font choice remains Source Sans 3 across both repositories.
 
+The repository-root `CITATION.cff` is a regular, generated copy for GitHub's
+"Cite this repository" metadata. Edit only `shared/web/CITATION.cff`, then run
+`make citation-sync` and commit both files together. Build and site checks reject
+a missing, symlinked or divergent root copy. A hardlink relationship would not
+survive a Git checkout; the checked copy makes the contract explicit and portable.
+
 Hugo renders the bundle directly, including `/cite-skope/` and `/terms-of-use/`.
 The small `footer.html` adapter renders escaped text segments and explicit HTTPS
 links. `web-assets.html` generates fingerprinted CSS from tokens and styling.

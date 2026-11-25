@@ -14,6 +14,11 @@ make serve
 make stop
 ```
 
+Use `make logs` to inspect Hugo output and `make status` to check the preview.
+The Makefile exports the pinned `HUGO_VERSION` for every Compose command. A bare
+`docker compose logs` or a Compose UI may report that this variable is missing
+even while Hugo is running; use the Make targets to inspect the service.
+
 Use `make serve PREVIEW_PORT=1314` if another site uses port 1313. Source is mounted
 into the toolchain image; rebuilding the image does not bake in site content.
 `make serve` rebuilds and renews the dependency volume. Project tools run inside
@@ -55,11 +60,56 @@ Builds use local verified files with no reverse dependency on the app. See
 The source/build link identifies this website's Git revision; tracked local edits
 add `-dirty` to the build label.
 
+Content images use the `legacy-image` shortcode, which supplies intrinsic
+dimensions and generates responsive WebP variants through Hugo. Original media
+stays at its archived `wp-content/uploads/` URL. Use descriptive `alt` text and
+set `eager=true` only for an image near the start of the page; other images load
+lazily. Do not edit generated variants in `public/` or `resources/_gen/`.
+
+Keep semantic heading levels sequential below each page's H1. Author/date
+metadata belongs in paragraphs. For a literal URL label inside an imported HTML
+anchor, encode its colon as `&#58;` so Goldmark does not generate a nested link;
+this preserves the displayed text and destination. `make site-check` checks
+rendered semantics, image dimensions and all responsive-image URLs.
+
+The small `layouts/docs/baseof.html` override gives Docsy's main and sidebar
+regions unique landmarks. It retains upstream chrome partials; review it when
+upgrading Docsy. Header offsets track the rendered navbar height, including
+enlarged text; without JavaScript, the header stays in normal document flow.
+
 ## Content and migration
 
-Edit `content/`. Imported pages use readable HTML inside Markdown files to retain
-WordPress figures, tables and anchors without a lossy automatic conversion.
-New prose can use Markdown. Use descriptive URL slugs matching link labels, and retain original WordPress
+See the [Hugo/Docsy cleanup review](docs/hugo-content-review.md) for remaining
+component opportunities and the recommended order.
+
+Edit `content/`. Prefer Markdown for headings, paragraphs, lists, emphasis and
+links. Use explicit heading attributes (`{#existing-anchor}`) when an anchor must
+stay stable. Use `skope-figure` for captioned/standalone illustrations and `legacy-image`
+for inline icons. Retain HTML for tables, anchored paragraphs, structural
+layout wrappers and links whose attributes carry behavior. Separate structural
+HTML and Markdown with blank lines, without indenting prose as code.
+
+Figures share the image pipeline (dimensions, responsive WebP variants and lazy
+loading) with inline icons. Captions support inline Markdown:
+
+```go-html-template
+{{< skope-figure src="wp-content/uploads/2021/11/Header.png" alt="SKOPE application header." caption="**SKOPE Header**" >}}
+```
+
+Optional `width`, `align` (`left`, `right`, `center`), `class`, `image-class`,
+`link` and `eager=true` parameters control display without duplicating HTML.
+Keep archived media in place; `link` can point to an original image URL.
+
+“On this page” uses Hugo's native `TableOfContents` for headings at levels 2–4.
+Keep headings in Markdown so they appear automatically; do not duplicate a list
+of section links. `notoc: true` deliberately disables this outline; `toc_hide`
+controls the separate left sidebar catalog.
+
+Launch and guide buttons share `layouts/partials/skope/action.html` and the
+`skope/actions.html` group. Templates call the partial; content uses
+`{{< skope-actions >}}` (or `items="launch"` / `items="guide"`). The launch label
+and destination come from the `launch-skope` menu item; the guide label and URL
+come from its page. Styling lives in `.skope-action` and `.skope-actions`. Use descriptive URL slugs matching link labels, and retain original WordPress
 paths as front matter aliases when renaming pages. See [migration review](docs/migration/README.md).
 
 The original XML remains local and is ignored by Git: it includes unpublished

@@ -1,0 +1,3 @@
+{{- $items := slice "launch" "guide" -}}
+{{- with .Get "items" }}{{ $items = split . "," }}{{ end -}}
+{{- partial "skope/actions.html" (dict "page" .Page "items" $items) -}}

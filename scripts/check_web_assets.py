@@ -12,6 +12,13 @@ def nonempty(value):
     return isinstance(value, str) and bool(value.strip())
 
 
+def validate_root_citation(root):
+    mirror = root / 'CITATION.cff'
+    source = root / 'shared/web/CITATION.cff'
+    if mirror.is_symlink() or not mirror.is_file() or mirror.read_bytes() != source.read_bytes():
+        raise ValueError('Root CITATION.cff must be a regular copy of shared/web/CITATION.cff; run make citation-sync')
+
+
 def contrast(first, second):
     def luminance(value):
         if not isinstance(value, str) or not re.fullmatch(r'#[0-9a-fA-F]{6}', value):
@@ -102,6 +109,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     try:
         validate(args.directory)
+        validate_root_citation(Path('.'))
     except (ValueError, OSError) as error:
         parser.exit(1, f'Shared web assets: {error}\n')
     print('Shared web assets: schema, links, tokens, contrast and citation fields verified')

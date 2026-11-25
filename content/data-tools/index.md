@@ -11,10 +11,9 @@
   ]
 }
 
-
 SKOPE is initially focusing on providing high spatial resolution precipitation and temperature data for the last 2000 years in the Southwest US.
 
-A key project effort is <a title="Paleoenvironmental Reconstruction (PaleoCAR)" href='{{< relref "/paleocar" >}}'>PaleoCAR</a>.  PaleoCAR implements a a correlation adjusted regression of tree ring series with 100+ years of contemporary data modeled by PRISM at an 800 m scale to retrodict climatic variables, notably precipitation and temperature over the last 2000 years.
+A key project effort is [PaleoCAR]({{< relref "/paleocar" >}} "Paleoenvironmental Reconstruction (PaleoCAR)").  PaleoCAR implements a a correlation adjusted regression of tree ring series with 100+ years of contemporary data modeled by PRISM at an 800 m scale to retrodict climatic variables, notably precipitation and temperature over the last 2000 years.
 
 <a title="FedData" href='{{< relref "/feddata" >}}'><em>FedData</em></a> is a package for the <em>R</em> statistical environment that allows for automated access to several federated data sources. The package is under active development by SKOPE researchers.
 

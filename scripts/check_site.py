@@ -6,7 +6,9 @@ import json
 from pathlib import Path
 import re
 from urllib.parse import unquote, urljoin, urlsplit
-from check_web_assets import validate
+from check_web_assets import validate, validate_root_citation
+from check_semantics import check_semantics
+from check_outline import check_outline
 
 class Links(HTMLParser):
     def __init__(self):
@@ -35,6 +37,9 @@ class Links(HTMLParser):
         if tag=='a' and attrs.get('name'): self.ids.add(attrs['name'])
         for key in ('href','src'):
             if attrs.get(key): self.links.append((tag,key,attrs[key]))
+        for candidate in attrs.get('srcset', '').split(','):
+            if candidate.strip():
+                self.links.append((tag, 'srcset', candidate.split()[0]))
 
     def handle_endtag(self, tag):
         if tag == 'footer':
@@ -79,6 +84,7 @@ def check_footer(parser, footer, prefix):
 def check(output, base_url):
     try:
         footer = validate(Path('shared/web'))
+        validate_root_citation(Path('.'))
     except (ValueError, OSError) as error:
         print(f'Shared web assets: {error}')
         return 1
@@ -88,6 +94,9 @@ def check(output, base_url):
     for path in pages:
         parser=Links(); parser.feed(path.read_text()); parsed[path]=parser
         errors.extend(f'{path}: {error}' for error in check_footer(parser, footer, prefix))
+        if not parser.redirect:
+            errors.extend(f'{path}: {error}' for error in check_semantics(path.read_text()))
+            errors.extend(f'{path}: {error}' for error in check_outline(path.read_text()))
     policy = json.loads(Path('shared/web/application-policy.json').read_text())
     for name, field in [('citation', 'citationGuidance'), ('terms', 'terms')]:
         path = output / footer['content_links'][name].strip('/') / 'index.html'

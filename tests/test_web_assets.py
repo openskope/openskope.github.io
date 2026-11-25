@@ -7,13 +7,26 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from check_web_assets import contrast, validate
+from check_web_assets import contrast, validate, validate_root_citation
 from check_site import Links, check_footer
 
 SOURCE = Path(__file__).resolve().parents[1] / 'shared/web'
 
 
 class BundleTests(unittest.TestCase):
+    def test_root_citation_must_match_the_canonical_source(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'shared/web').mkdir(parents=True)
+            shutil.copyfile(SOURCE / 'CITATION.cff', root / 'shared/web/CITATION.cff')
+            with self.assertRaisesRegex(ValueError, 'citation-sync'):
+                validate_root_citation(root)
+            shutil.copyfile(SOURCE / 'CITATION.cff', root / 'CITATION.cff')
+            validate_root_citation(root)
+            (root / 'CITATION.cff').write_text('outdated metadata')
+            with self.assertRaisesRegex(ValueError, 'citation-sync'):
+                validate_root_citation(root)
+
     def test_current_bundle_and_footer_contrast(self):
         validate(SOURCE)
         # Reference contrast values verify the luminance calculation itself.

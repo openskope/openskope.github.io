@@ -1,0 +1,12 @@
+{{/* Docsy ScrollSpy requires this wrapper, even on pages without sections. */}}
+<div class="td-toc" data-skope-outline{{ if .Params.notoc }} data-outline-disabled{{ end }}>
+  {{- if not .Params.notoc -}}
+    {{- if .Fragments.Headings -}}
+      <div class="td-toc-title">
+        <span class="td-toc-title__text">{{ i18n "toc_on_this_page" }}</span>
+        <a class="td-toc-title__link" title="{{ i18n "toc_top_of_page" }}" href="#"></a>
+      </div>
+      {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` (printf `<nav id="TableOfContents" aria-label="%s">` (i18n "toc_on_this_page")) | safeHTML }}
+    {{- end -}}
+  {{- end -}}
+</div>

@@ -1,4 +1,4 @@
-:root { --skope-navbar-height: 5rem; }
+:root { --skope-navbar-height: 5rem; --skope-navbar-min-height: 5rem; }
 h1, h2, h3 { text-wrap: balance; }
 .td-content { max-width: 76ch; line-height: 1.75; }
 .td-content h1, .td-content h2, .td-content h3, .skope-home-heading h1, .skope-explore h2 { color: $primary; }
@@ -9,7 +9,7 @@ h1, h2, h3 { text-wrap: balance; }
 .td-content a { overflow-wrap: anywhere; }
 // The climate trace and live lettering belong to the shared navbar, like the app.
 .td-navbar.skope-navbar {
-  min-height: var(--skope-navbar-height);
+  min-height: var(--skope-navbar-min-height);
   padding: 0;
   background-color: $light;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ h1, h2, h3 { text-wrap: balance; }
   align-items: center;
   gap: 0 1.5rem;
   width: 100%;
-  min-height: var(--skope-navbar-height);
+  min-height: var(--skope-navbar-min-height);
   padding: .5rem clamp(1rem, 2vw, 2rem);
 }
 .skope-navbar .skope-brand { display: flex; flex-direction: column; align-items: flex-start; margin: 0; padding: 0; text-decoration: none; min-width: 0; }
@@ -36,27 +36,23 @@ h1, h2, h3 { text-wrap: balance; }
 .skope-navbar .navbar-nav { flex-direction: column; align-items: stretch; gap: .25rem; }
 .skope-navbar .nav-link { color: $secondary; font-size: .9375rem; font-weight: 500; padding: .5rem .625rem; border-radius: .25rem; }
 .skope-navbar .nav-link:hover, .skope-navbar .nav-link.active { color: $primary; background: rgba(255,255,255,.9); text-decoration: underline; text-underline-offset: .25em; }
-.skope-navbar .nav-link.skope-launch { color: #fff; background: $secondary; text-align: center; }
 .skope-navbar-search .td-search__input { background-color: rgba(255,255,255,.95); color: $secondary; border: 1px solid #8a93a6; }
-@media (min-width: 1200px) {
-  .skope-navbar-container { flex-wrap: nowrap; }
-  .skope-navbar .skope-menu-toggle { display: none; }
-  .skope-navigation.collapse { display: flex; flex-basis: auto; align-items: center; gap: 1rem; margin-inline-start: auto; padding: 0; }
-  .skope-navbar .navbar-nav { flex-direction: row; align-items: center; }
-  .skope-navbar-search { width: 11rem; }
-}
 @media (min-width: 1400px) {
+  .skope-navbar-container { flex-wrap: wrap; }
+  .skope-navbar .skope-menu-toggle { display: none; }
+  .skope-navigation.collapse { display: flex; flex-wrap: wrap; min-width: 0; max-width: 100%; flex-basis: auto; align-items: center; gap: 1rem; margin-inline-start: auto; padding: 0; }
+  .skope-navbar .navbar-nav { flex-direction: row; flex-wrap: wrap; align-items: center; }
   .skope-navbar-search { width: 12rem; }
 }
 @media (max-width: 599.98px) {
-  :root { --skope-navbar-height: 4rem; }
+  :root { --skope-navbar-height: 4rem; --skope-navbar-min-height: 4rem; }
   .skope-brand__title { font-size: 2rem; }
   .skope-brand__subtitle { display: none; }
 }
 // Keep Docsy's fixed-header and sticky-sidebar offsets aligned with the navbar.
 @media (min-width: 768px) {
   .td-home .td-main { padding-top: var(--skope-navbar-height); }
-  .td-main main { --td-main-padding-top: calc(var(--skope-navbar-height) + 1.5rem); }
+  .td-main main { padding-top: calc(var(--skope-navbar-height) + 1.5rem); }
   .td-sidebar, .td-sidebar-toc { margin-top: var(--skope-navbar-height); }
   .td-sidebar__inner, .td-sidebar-toc { top: var(--skope-navbar-height); }
   .td-sidebar-toc { height: calc(100vh - var(--skope-navbar-height)); }
@@ -66,7 +62,7 @@ h1, h2, h3 { text-wrap: balance; }
 .skope-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .75rem; }
 .skope-home-heading { margin-bottom: 2rem; }
 .skope-home-heading h1 { font-size: clamp(1.75rem, 2.5vw, 2.25rem); margin: 0; }
-.td-home main.skope-home { padding-top: 2rem; padding-bottom: 3rem; }
+.td-home .skope-home { padding-top: 2rem; padding-bottom: 3rem; }
 .skope-home .td-content { margin-inline: auto; }
 .skope-home-copy > p { text-align: left; }
 .skope-home-copy > p:empty { display: none; }
@@ -87,3 +83,48 @@ a:focus-visible, button:focus-visible { outline: 3px solid $link-color; outline-
 .td-content .skope-reference-note { padding-inline-start: 1.875rem; }
 .td-content .skope-reference-note--deep { padding-inline-start: 2.5rem; }
 .td-content .skope-presentation-reference { line-height: 1.5; }
+
+.skope-skip-link { position: fixed; inset-inline-start: 1rem; top: -10rem; z-index: 2000; padding: .75rem 1rem; background: #fff; color: $link-color; }
+.skope-skip-link:focus { top: .5rem; }
+#td-main-content, .td-content [id] { scroll-margin-top: calc(var(--skope-navbar-height) + 1rem); }
+// Without JavaScript, keep the header in flow so enlarged text still fits.
+.no-js .td-navbar.skope-navbar { position: static; }
+.no-js .td-home .td-main, .no-js .td-main main { padding-top: 1.5rem; }
+.no-js .td-sidebar, .no-js .td-sidebar-toc { margin-top: 0; }
+
+// Use SKOPE: lead with the application; keep the guide and release archive distinct.
+.skope-use-page .td-content, .skope-research-page .td-content { max-width: none; }
+.td-content .skope-page-intro { max-width: 50ch; margin-bottom: 2rem; font-size: 1.25rem; line-height: 1.5; }
+.skope-use-launch { display: grid; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+.skope-use-launch__copy { max-width: 40ch; }
+.skope-use-launch__copy h2 { margin-top: 0; }
+.skope-action { display: inline-flex; align-items: center; gap: .75rem; min-height: 50px; padding: .75rem 1.25rem; }
+.td-content .skope-use-launch__figure { margin: 0; min-width: 0; }
+.skope-use-launch__figure img { display: block; width: 100%; border: 1px solid $gray-300; border-radius: .25rem; }
+.skope-use-launch__figure figcaption { margin-top: .75rem; }
+.skope-use-guide { border-top: 1px solid $gray-300; padding-top: 2rem; }
+.skope-use-guide__intro { max-width: 52ch; }
+.skope-use-guide__intro h2 { margin-top: 0; }
+.skope-use-guide__links ul { display: grid; gap: 0 2rem; list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.skope-use-guide__links li { border-bottom: 1px solid $gray-300; }
+.skope-use-guide__links a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; padding: .75rem 0; text-decoration: none; }
+.skope-use-guide__links a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.skope-use-release { margin-top: 3rem; padding-top: 1.5rem; }
+.skope-use-release h2 { font-size: 1.125rem; }
+.skope-use-release p { max-width: 65ch; font-size: .9375rem; }
+@media (min-width: 1100px) {
+  .skope-use-launch { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .skope-use-guide__links ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+// Research uses the same resource-page lead and launch action as Use SKOPE.
+.skope-research-page .skope-actions { margin: 1.5rem 0 3rem; }
+.skope-research-outputs { display: grid; gap: 2rem; margin-bottom: 2.5rem; }
+.skope-research-outputs section, .skope-research-software { border-top: 1px solid $gray-300; padding-top: 1.5rem; }
+.skope-research-outputs h2, .skope-research-software h2 { margin-top: 0; }
+.skope-research-outputs p, .skope-research-software p { max-width: 50ch; }
+.skope-research-software { margin-bottom: 3rem; }
+.skope-research-page .td-content > h2 { font-size: 1.25rem; }
+@media (min-width: 1100px) {
+  .skope-research-outputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

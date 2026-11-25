@@ -1,0 +1,23 @@
+{{- /* Button labels/destinations come from the site menu and guide page. */ -}}
+{{- $site := .page.Site -}}
+{{- $href := "" -}}
+{{- $label := "" -}}
+{{- $class := "btn btn-outline-primary skope-action" -}}
+{{- $external := false -}}
+{{- if eq .action "launch" -}}
+  {{- $entries := where $site.Menus.main "Identifier" "launch-skope" -}}
+  {{- if ne (len $entries) 1 }}{{ errorf "Define exactly one launch-skope menu item" }}{{ end -}}
+  {{- $entry := index $entries 0 -}}
+  {{- $href = $entry.URL -}}
+  {{- $label = $entry.Name -}}
+  {{- $class = "btn btn-primary skope-action skope-launch-button" -}}
+  {{- $external = true -}}
+{{- else if eq .action "guide" -}}
+  {{- $guide := $site.GetPage "/users-guide" -}}
+  {{- if not $guide }}{{ errorf "Missing SKOPE user guide page" }}{{ end -}}
+  {{- $href = $guide.RelPermalink -}}
+  {{- $label = $guide.LinkTitle -}}
+{{- else -}}
+  {{- errorf "Unknown SKOPE action %q" .action -}}
+{{- end -}}
+<a class="{{ $class }}" href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener noreferrer" aria-label="{{ $label }} (opens in a new tab)"{{ end }}>{{ $label }}{{ if $external }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>{{ end }}</a>

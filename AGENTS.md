@@ -11,7 +11,7 @@ should match link labels in slug form; retain legacy WordPress paths as aliases.
 ## Authoritative sources
 
 - `hugo.yaml`: configuration, menus, theme import and supported Hugo minimum
-- `content/`: reviewed site content; imported HTML within Markdown is intentional
+- `content/`: reviewed site content; prefer Markdown, retaining HTML where semantics, anchors or layout require it
 - `static/`: local media and custom-domain declaration
 - `go.mod` / `go.sum`: exact Docsy module
 - `HUGO_VERSION` and `Dockerfile`: matching Hugo version and official image digest

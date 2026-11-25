@@ -99,5 +99,43 @@
     "scope": "Replace inline presentation in ten content files with central theme classes; preserve all authored wording, links, source IDs and URLs.",
     "presentation": "Announcements and links use the site link color; alignment and normal text weight use Bootstrap utilities; reference indentation and presentation line height use site classes. Image display widths move to HTML width attributes.",
     "accessibility": "Remove the Risk Landscapes inline outline suppression and orange link override so the central link and keyboard-focus rules apply."
+  },
+  "accessibility_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "Repair the seven Impeccable findings while preserving authored narrative, front matter, existing link destinations and archived media.",
+    "markup": "Escape URL-label colons inside raw HTML anchors; repair heading ranks and Wednesday agenda list nesting; provide unique server-rendered main/navigation/complementary landmarks and a keyboard skip link.",
+    "images": "Add alternatives grounded in the existing captions, nearby instructions and visible UI. Keep explanatory inline icons and the redundant release banner decorative. Render images through legacy-image with dimensions, responsive WebP derivatives and below-fold lazy loading. All original media bytes and URLs remain unchanged.",
+    "layout": "Observe actual navbar height for text/font/menu changes; keep the no-JavaScript navbar in document flow.",
+    "preservation": "Compared edited content against the committed source: all narrative text, existing href destinations and publication metadata retained. Citation presentation unchanged."
+  },
+  "use_page_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "User-requested visual refinement of Use SKOPE and standardization of the current guide label to SKOPE User Guide.",
+    "layout": "Application launch and an illustration from the existing guide lead; guide section links follow; the unchanged dated release paragraph moves into Release history.",
+    "labels": "Current-guide title and references use SKOPE User Guide. Published URLs, fragment IDs, aliases, archive titles and the original import report remain unchanged.",
+    "citation": "Root CITATION.cff is a regular generated copy of shared/web/CITATION.cff for GitHub metadata, with a drift guard and make citation-sync. Canonical citation metadata and rendered Cite SKOPE presentation are unchanged."
+  },
+  "research_page_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "User-requested Research page refinement with the current application replacing the direct legacy prototype entry.",
+    "layout": "Reuse the resource-page intro and launch button from Use SKOPE; organize Publications and Presentations as research outputs, retain YesWorkflow and related research questions.",
+    "history": "Keep Project news and history in Related pages. Its existing prototype archive and published legacy routes remain available.",
+    "destinations": "Launch SKOPE points to https://app.openskope.org/. The Research route and /publications-presentations/ alias remain unchanged."
+  },
+  "hugo_markdown_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "User-requested idiomatic Hugo/Markdown pass, shared action buttons and consistently useful section navigation.",
+    "content": "Replace attribute-free paragraphs and all HTML section headings with Markdown. Simplify ordinary links and flat lists while retaining structural wrappers, figures, tables, anchored paragraphs, nested historical lists and behavior-bearing links where appropriate.",
+    "components": "One action partial serves launch/guide buttons on Home, Use SKOPE, Research and the navbar. Content calls a thin shortcode. Canonical labels and destinations come from the site menu and guide page.",
+    "outline": "Use native Hugo TableOfContents at levels 2–4. Remove the custom rendered-HTML outline parser and content adapter. Preserve explicit anchors; add a rendered-heading/outline coverage guard.",
+    "preservation": "Compared all rendered content bodies against the pre-conversion build: link destinations and existing anchors retained. Authored prose matches after normalizing Hugo typography and the corrected visible Markdown emphasis markers in FedData package links. Source IDs, routes, aliases, scientific wording and citation presentation retained."
+  },
+  "content_components_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "Complete the three requested Hugo/Markdown follow-ups in order, retaining authored wording and published URLs.",
+    "figures": "All 18 figure wrappers now call skope-figure. Figures and legacy-image share skope/image.html; captions use inline Markdown. All 44 rendered image sources, srcsets, sizes, alt text, dimensions and loading/decoding attributes match the baseline.",
+    "catalog": "All 25 resource entries use Markdown definition lists and links. Historical destinations and visible URL-label mismatches are retained. Standard Markdown links use ordinary same-tab navigation.",
+    "archives": "The 2015 workshop and 2017 meeting use Markdown emphasis, nested lists and explicit line breaks. The same list conversion covers the 2022 release feature list; its redundant app-link span is removed.",
+    "preservation": "Compared all rendered content bodies against a fresh pre-change build: wording, link destinations and anchors retained after whitespace normalization. Separated the meeting agenda break at 10:00 from the preceding item. The user-edited May 2022 landing-page announcement is byte-for-byte unchanged."
   }
 }

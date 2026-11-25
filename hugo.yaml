@@ -38,13 +38,34 @@ menu:
       pageRef: /about
       weight: 40
     - name: Launch SKOPE
+      identifier: launch-skope
       url: https://app.openskope.org
       weight: 50
 markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
   goldmark:
     renderer:
       unsafe: true
 module:
+  mounts:
+    - source: archetypes
+      target: archetypes
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: data
+      target: data
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+    - source: static
+      target: static
+    - source: static/wp-content/uploads
+      target: assets/legacy-images
   hugoVersion:
     min: 0.170.1
   imports:

@@ -10,8 +10,8 @@
 
 The current revision and technical details on YesWorkflow technical details see our <a title="YesWorkflow Link" href='https://github.com/yesworkflow-org' target="_blank">Github YesWorkflow Site</a>.
 
-McPhillips, Timothy, Tianhong Song, Tyler Kolisnik, Steve Aulenbach, Khalid Belhajjame, Kyle Bocinsky, Yang Cao, James Cheney, Fernando Chirigati, Saumen Dey, Juliana Freire, Christopher Jones, James Hanken, Keith W. Kintigh, Timothy A. Kohler, David Koop, James A. Macklin, Paolo Missier, Mark Schildhauer, Christopher Schwalm, Yaxing Wei, Mark Bieda, Bertram Ludäscher.  2015      YesWorkflow: A User-Oriented, Language-Independent Tool for Recovering Workflow Information from Scripts. <em>International Journal of Digital Curation </em>10(1): 298–313. <a href='http://dx.doi.org/10.2218/ijdc.v10i1.370'>DOI: 10.2218/ijdc.v10i1.370</a>
+McPhillips, Timothy, Tianhong Song, Tyler Kolisnik, Steve Aulenbach, Khalid Belhajjame, Kyle Bocinsky, Yang Cao, James Cheney, Fernando Chirigati, Saumen Dey, Juliana Freire, Christopher Jones, James Hanken, Keith W. Kintigh, Timothy A. Kohler, David Koop, James A. Macklin, Paolo Missier, Mark Schildhauer, Christopher Schwalm, Yaxing Wei, Mark Bieda, Bertram Ludäscher.  2015      YesWorkflow: A User-Oriented, Language-Independent Tool for Recovering Workflow Information from Scripts. <em>International Journal of Digital Curation </em>10(1): 298–313. [DOI: 10.2218/ijdc.v10i1.370](http://dx.doi.org/10.2218/ijdc.v10i1.370)
 
 Below is an example of YesWorkflow output for the PaleoCAR environmental reconstruction process implemented in R:
 
-<img class="alignnone size-full wp-image-117" src='{{< siteurl "wp-content/uploads/2015/03/Screen-Shot-03-18-15-at-12.51-PM.png" >}}' alt="Screen Shot 03-18-15 at 12.51 PM" width="696" height="796" />
+{{< legacy-image src="wp-content/uploads/2015/03/Screen-Shot-03-18-15-at-12.51-PM.png" alt="YesWorkflow diagram showing computational steps and the data passed between them." class="alignnone size-full wp-image-117" width="696" >}}
