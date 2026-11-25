@@ -37,3 +37,20 @@ GitHub CI, Pages deployment, DNS/TLS and old-origin shutdown remain separate
 operations. Historical external links and editorial claims are not all reviewed.
 See the migration README and review record for source limitations and deliberate
 content/navigation changes.
+
+## Shared footer and provenance review — 2026-11-25
+
+The citation and terms pages bring the current render to 50 HTML files, including
+19 legacy redirects. Root and `/preview/` builds retain all 27 imported routes,
+46 archived media files and zero internal-link errors or anchor warnings.
+The original XML checksum remains unchanged; it remains private and ignored.
+Homepage testing/feedback and release passages and the Research hub's original
+links were restored from that export. Migration edits are recorded in `review.json`.
+
+The website owns the five-file `shared/web/` bundle. The app imports a full Git
+revision and verifies local checksums; its root CFF matches the imported CFF.
+The app's 531 existing tests, bundle tests, type checks and production-image build
+passed. Browser checks compared footer text and computed styling at 360, 768,
+1440 and 1920 pixels and verified citation content, acceptance persistence,
+decline behavior and first-visit consent. Citation/CFF downloads and shared
+footer links also passed the website's root/subpath browser checks.

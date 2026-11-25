@@ -58,6 +58,17 @@ never overwrite reviewed content as part of routine builds.
 - Update shared sources here, validate, commit, then advance the app's bundle pin
   through review. Adding shared files requires an explicit bundle-contract update.
 
+## Authored content and provenance
+
+The original private WordPress XML is the canonical migration source. Preserve
+its checksum and the WordPress ID/URL mappings in `docs/migration/`; keep a durable
+private backup of the XML rather than publishing it or duplicating page archives.
+Preserve authored prose and intent. Do not summarize or silently rewrite it during
+migration, styling, navigation or maintenance work. Formatting and mechanical
+URL/media repairs may preserve intent; record them in the migration review.
+Keep added navigation/context distinguishable from original prose. Later deliberate
+revisions belong in `content/` and Git history, retaining their source mappings.
+
 ## Navigation
 
 Keep the main menu thin: Use SKOPE, Data & tools, Research and About, plus the

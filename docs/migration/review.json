@@ -44,7 +44,7 @@
     ],
     "approach": "Curated main menu and Docsy toc_hide keep four entry pages in the sidebar. Other pages remain searchable and linked from the relevant entry pages. Canonical routes follow link labels; original WordPress routes are retained as aliases.",
     "prototype_news": "/news/ aggregates release announcements, prototype documentation and development meetings. Original pages remain at their published URLs with prototype context.",
-    "home": "Move release/prototype emphasis into news/history; retain scientific introduction and original climate figure, with direct application/guide actions."
+    "home": "Preserve the original scientific introduction, testing/feedback and May 2022 release passages, and climate figure; keep direct application/guide actions. Aggregate prototype material in news/history without summarizing original prose."
   },
   "branding_review": {
     "banner": "Use original unlettered AltHeaderv3.png climate trace unchanged, with live HTML wordmark/tagline. Preserve the initially recovered lettered banner as provenance.",
@@ -79,5 +79,19 @@
     "/workshop/": "/design-prototyping-workshop-2015/",
     "/meeting17/": "/team-meeting-2017/",
     "/skope-products/": "/products/"
+  },
+  "wording_review": {
+    "canonical_source": "Original private XML identified by source_sha256 in wordpress-import.json; no duplicate source archive",
+    "restored": [
+      "Home page testing/feedback and May 2022 release passages",
+      "Original Research/Products hub links to Publications, Presentations, SKOPE Prototype and YesWorkflow"
+    ],
+    "retained_changes": [
+      "User-requested routes, headings and thin navigation",
+      "Added related-page navigation and prototype archive notices",
+      "Mechanical URL/media repairs and the download-to-view-article label",
+      "User guide punctuation normalization and home figure placement"
+    ],
+    "policy": "Preserve authored intent; no silent summaries. Retain source IDs and record later deliberate revisions in Git."
   }
 }

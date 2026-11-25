@@ -22,7 +22,7 @@ Only the Docsy gutter correction belongs in the website's own footer SCSS.
 ## One-way dependency
 
 SKOPE UI imports the five files from an exact website commit into
-`app/shared/web/`, with the source SHA and file checksums in
+`app/vendor/web-assets/`, with the source SHA and file checksums in
 `app/web-assets.lock.json`. Its root `CITATION.cff` is an imported copy for GitHub
 and existing citation-generation tooling; Make checks that it matches the bundle.
 The app renders shared policy text in its existing dialogs. State, dialogs,
@@ -43,7 +43,8 @@ The imported files are generated copies: never edit them independently.
    a content change has been explicitly requested.
 3. Commit the website changes. In `skopeui`, run
    `make deps-web-assets WEB_ASSETS_REVISION=<full-40-character-sha>`.
-   The website repository currently requires read access. For unpublished local
+   The website repository currently requires read access. The importer can use
+   existing Git credentials or the installed GitHub CLI credential helper. For unpublished local
    commits add `WEB_ASSETS_SOURCE=/absolute/path/to/site`; imports still read
    committed Git objects, never working-tree files. Push the source commit before
    others need to refresh it. Normal app builds need no source credentials.

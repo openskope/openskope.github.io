@@ -13,6 +13,19 @@
 
 
 
+<p>While we have extensively tested SKOPE, this is a complex software application that is only recently completed.&nbsp; Please <a href='mailto:skope-team@googlegroups.com'>notify us</a> if you run into any problems or discover any bugs.&nbsp; We look forward to adding additional datasets and software improvements as time and funding allow.&nbsp; </p>
+
+
+
+<p><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color"><strong style="color: rgb(18, 14, 225); background-color: rgba(0, 0, 0, 0);">The new version of  SKOPE including many new features was released </strong></mark><mark style="background-color:rgba(0, 0, 0, 0);color:#120ee1" class="has-inline-color"><strong>May  7, </strong></mark><mark style="background-color:rgba(0, 0, 0, 0);color:#120ee1" class="has-inline-color"><strong>2022.</strong></mark>  </p>
+
+
+
+<h3 class="wp-block-heading has-text-align-center"><a href='https://app.openskope.org'><strong>Run the SKOPE Application</strong></a></h3>
+
+
+
+<h3 class="wp-block-heading has-text-align-center"><a href='{{< relref "/users-guide" >}}'><strong> Documentation for the SKOPE App</strong></a></h3>
 
 
 
@@ -20,20 +33,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p></p>
 
 
 

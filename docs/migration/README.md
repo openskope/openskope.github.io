@@ -33,6 +33,29 @@ Historical statements, old prototype pages, affiliations and release dates are
 preserved for editorial review. They do not establish current application state.
 External links have not all been checked or endorsed. No PHP is copied or run.
 
+## Authored wording and provenance
+
+The original XML is the canonical source, identified by the checksum above.
+Keep it durably backed up in private storage; Git ignore rules are not a backup.
+No second page-body archive is needed. `wordpress-import.json` maps source IDs,
+URLs and titles; current front matter retains those IDs, while `review.json`
+records route, link/media and navigation changes. Git history records subsequent
+revisions. The local original export has not been modified or published.
+
+A wording audit found that the homepage's testing/feedback and May 2022 release
+passages had been omitted, and the Research hub had replaced its original link
+list. Those source passages and links were restored. The home image remains in
+the requested two-column layout. Retained differences are renamed headings/routes,
+added navigation sections, explicit prototype-archive context, mechanical link
+repairs, a `download` → `view article` label for an unavailable PDF now linked via
+DOI, and a punctuation normalization in the user guide. These are not a claim that
+the migration is byte-for-byte identical HTML. New news/citation/terms pages and
+shared footer content are additions, not original WordPress page prose.
+
+Preserve authored intent; do not summarize or silently rewrite it as part of
+maintenance. Later deliberate revisions may change content while retaining source
+IDs and documenting rationale in Git. The XML remains the primary evidence.
+
 ## Cutover
 
 The old WordPress system has a reported unpatched PHP vulnerability. Prioritize
