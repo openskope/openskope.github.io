@@ -1,0 +1,2 @@
+# Preserve upstream license bytes: checksum locks include original whitespace.
+static/fonts/**/OFL.txt -text -whitespace

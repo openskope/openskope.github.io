@@ -1,0 +1,11 @@
+.git
+public
+resources
+node_modules
+.hugo_cache
+*.xml
+docs
+content
+static
+tests
+tmp

@@ -1,0 +1,38 @@
+name: openskope-site
+services:
+  hugo:
+    image: openskope/site:local
+    build:
+      context: .
+      args:
+        HUGO_VERSION: ${HUGO_VERSION:?Run Compose through make}
+    ports:
+      - "127.0.0.1:${PREVIEW_PORT:-1313}:1313"
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    working_dir: /src
+    environment:
+      HOME: /tmp
+      npm_config_cache: /tmp/.npm
+      HUGO_CACHEDIR: /tmp/hugo_cache
+    entrypoint: sh
+    command: ["-c", "exec hugo server --bind 0.0.0.0 --renderToMemory --noHTTPCache"]
+    volumes:
+      - .:/src
+      - /src/node_modules
+  bootstrap:
+    profiles: [maintenance]
+    image: openskope/site-bootstrap:local
+    build:
+      context: .
+      target: toolchain
+      args:
+        HUGO_VERSION: ${HUGO_VERSION:?Run Compose through make}
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    working_dir: /src
+    entrypoint: sh
+    environment:
+      HOME: /tmp
+      npm_config_cache: /tmp/.npm
+      HUGO_CACHEDIR: /tmp/hugo_cache
+    volumes:
+      - .:/src

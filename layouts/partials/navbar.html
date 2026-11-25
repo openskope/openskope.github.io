@@ -1,0 +1,28 @@
+{{/* Site branding and menu; Bootstrap supplies responsive collapse behavior. */}}
+<nav class="td-navbar skope-navbar" aria-label="Main navigation">
+  <div class="skope-navbar-container">
+    <a class="navbar-brand skope-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="SKOPE home">
+      <span class="skope-brand__title">{{ .Site.Title }}</span>
+      <span class="skope-brand__subtitle">{{ .Site.Params.description }}</span>
+    </a>
+    <button class="navbar-toggler skope-menu-toggle" type="button"
+      data-bs-toggle="collapse" data-bs-target="#skope-navigation"
+      aria-controls="skope-navigation" aria-expanded="false">Menu</button>
+    <div class="collapse skope-navigation" id="skope-navigation">
+      <ul class="navbar-nav">
+        {{ $page := . }}
+        {{ range .Site.Menus.main }}
+          {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+          {{ $href := .URL }}
+          {{ with .Page }}{{ $href = .RelPermalink }}{{ end }}
+          <li class="nav-item">
+            <a class="nav-link{{ if $active }} active{{ end }}{{ if not .Page }} skope-launch{{ end }}"
+              href="{{ $href }}"{{ if $active }} aria-current="page"{{ end }}
+              {{ if not .Page }}target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      <div class="skope-navbar-search">{{ partial "search-input.html" . }}</div>
+    </div>
+  </div>
+</nav>

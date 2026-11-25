@@ -1,0 +1,83 @@
+{
+  "reviewed_on": "2026-11-24",
+  "retired_media": {
+    "/wp-content/uploads/2016/12/dAlpoim-Guedes-et-al-climate-chgange-archaeology-PNAS-Perspective-16.pdf": {
+      "source_status": "HTTP 404",
+      "action": "Replace unavailable download with the cited article's DOI landing page",
+      "replacement": "https://doi.org/10.1073/pnas.1616188113"
+    },
+    "/wp-content/uploads/2021/09/Select-Dataset.png": {
+      "source_status": "HTTP 404",
+      "action": "Remove broken inline image; retain the adjacent November 2021 Select Dataset figure"
+    }
+  },
+  "link_repairs": [
+    {
+      "from": "10.1038/ncomms6618",
+      "to": "https://doi.org/10.1038/ncomms6618",
+      "reason": "DOI used as a relative URL in source guide"
+    },
+    {
+      "from": "http://Paleocar",
+      "to": "/paleoenvironmental-reconstruction-paleocar/",
+      "reason": "Malformed home-page link; destination is an imported published page"
+    },
+    {
+      "from": "https://openskope.org/app",
+      "to": "https://app.openskope.org",
+      "reason": "Legacy application path; current application URL is used throughout the exported site"
+    }
+  ],
+  "content_review_pending": [
+    "Historical prototype and release claims (including 2018 predictions and the May 2022 release announcement) are retained without asserting present application behavior",
+    "Current team affiliations, support contacts and external resource links need editorial review",
+    "The original export has one XML-invalid vertical-tab byte; importer replaces it with a space in memory, leaving the original unchanged",
+    "The empty SKOPE Products page is retained at its published URL"
+  ],
+  "navigation_review": {
+    "top_level": [
+      "Use SKOPE",
+      "Data & tools",
+      "Research",
+      "About",
+      "Launch SKOPE"
+    ],
+    "approach": "Curated main menu and Docsy toc_hide keep four entry pages in the sidebar. Other pages remain searchable and linked from the relevant entry pages. Canonical routes follow link labels; original WordPress routes are retained as aliases.",
+    "prototype_news": "/news/ aggregates release announcements, prototype documentation and development meetings. Original pages remain at their published URLs with prototype context.",
+    "home": "Move release/prototype emphasis into news/history; retain scientific introduction and original climate figure, with direct application/guide actions."
+  },
+  "branding_review": {
+    "banner": "Use original unlettered AltHeaderv3.png climate trace unchanged, with live HTML wordmark/tagline. Preserve the initially recovered lettered banner as provenance.",
+    "palette": {
+      "burgundy": "#800000",
+      "navy": "#102a63",
+      "links": "#17366e",
+      "neutral": "#f7f7f7"
+    },
+    "sources": "branding.json",
+    "typography": "Bitter 700 retains the staging identity; Source Sans 3 300–700 normal/italic was selected for both repos. Self-host WOFF2 with Unicode subsets, two preloads, font-display swap, fingerprinted URLs, licenses and pinned checksums. Pixelation requires an explicit design request.",
+    "layout": "Climate-trace branding in a compact shared navbar modeled on staging.openskope.org: 80px header on larger screens, collapsible menu on narrow screens, crisp wordmark/subtitle. No separate home hero; retain wider two-column introduction.",
+    "navbar_override": "Small site-specific layouts/partials/navbar.html reuses Hugo menus, Docsy search-input and Bootstrap collapse instead of copying the full upstream navbar. Reconcile after theme updates."
+  },
+  "route_changes": {
+    "/access-data-using-skope/": "/use-skope/",
+    "/environmental-information/": "/data-tools/",
+    "/publications-presentations/": "/research/",
+    "/what-is-skope/": "/about/",
+    "/skope-users-guide/": "/users-guide/",
+    "/skope-contact-information/": "/team/",
+    "/environmental-data-climate-reconstruction-resources/": "/environmental-data-resources/",
+    "/paleoenvironmental-reconstruction-paleocar/": "/paleocar/",
+    "/sample-questions-of-the-sort-skope-plans-to-address/": "/research-questions/",
+    "/skope-software-design/": "/software-design/",
+    "/skope-nsf-proposal/": "/nsf-proposal/",
+    "/skope-prototype/": "/prototype-overview/",
+    "/skope-prototype-users-guide/": "/prototype-users-guide/",
+    "/skope-prototype-app-users-guide/": "/prototype-app-users-guide/",
+    "/original-prototype/": "/prototype-retirement/",
+    "/announcement/": "/release-2022/",
+    "/workshop/": "/design-prototyping-workshop-2015/",
+    "/meeting17/": "/team-meeting-2017/",
+    "/skope-products/": "/products/"
+  }
+}

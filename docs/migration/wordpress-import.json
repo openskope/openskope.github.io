@@ -1,0 +1,451 @@
+{
+  "source_file": "skope.WordPress.2026-11-25.xml",
+  "source_sha256": "1a1693c05190ee1df94524e201ccc10c28556ab8967ef2e5b92b66641df944ff",
+  "xml_control_characters_replaced_in_memory": 1,
+  "published_pages": [
+    {
+      "id": "2",
+      "title": "Welcome to SKOPE",
+      "url": "https://www.openskope.org/",
+      "path": ""
+    },
+    {
+      "id": "18",
+      "title": "SKOPE Team",
+      "url": "https://www.openskope.org/skope-contact-information",
+      "path": "skope-contact-information"
+    },
+    {
+      "id": "30",
+      "title": "YesWorkflow",
+      "url": "https://www.openskope.org/yesworkflow",
+      "path": "yesworkflow"
+    },
+    {
+      "id": "57",
+      "title": "Web-Accessible Environmental Data & Climate Reconstruction Resources",
+      "url": "https://www.openskope.org/environmental-data-climate-reconstruction-resources",
+      "path": "environmental-data-climate-reconstruction-resources"
+    },
+    {
+      "id": "369",
+      "title": "SKOPE Prototype No Longer Available",
+      "url": "https://www.openskope.org/original-prototype",
+      "path": "original-prototype"
+    },
+    {
+      "id": "61",
+      "title": "Paleoenvironmental Reconstruction (PaleoCAR)",
+      "url": "https://www.openskope.org/paleoenvironmental-reconstruction-paleocar",
+      "path": "paleoenvironmental-reconstruction-paleocar"
+    },
+    {
+      "id": "64",
+      "title": "Sample SKOPE Questions",
+      "url": "https://www.openskope.org/sample-questions-of-the-sort-skope-plans-to-address",
+      "path": "sample-questions-of-the-sort-skope-plans-to-address"
+    },
+    {
+      "id": "76",
+      "title": "Risk Landscapes",
+      "url": "https://www.openskope.org/risk-landscapes",
+      "path": "risk-landscapes"
+    },
+    {
+      "id": "86",
+      "title": "Data Integration",
+      "url": "https://www.openskope.org/data-integration",
+      "path": "data-integration"
+    },
+    {
+      "id": "89",
+      "title": "Provenance",
+      "url": "https://www.openskope.org/provenance",
+      "path": "provenance"
+    },
+    {
+      "id": "94",
+      "title": "Environmental Information",
+      "url": "https://www.openskope.org/environmental-information",
+      "path": "environmental-information"
+    },
+    {
+      "id": "131",
+      "title": "SKOPE Software Design",
+      "url": "https://www.openskope.org/skope-software-design",
+      "path": "skope-software-design"
+    },
+    {
+      "id": "207",
+      "title": "Workshop",
+      "url": "https://www.openskope.org/workshop",
+      "path": "workshop"
+    },
+    {
+      "id": "229",
+      "title": "SKOPE Prototype",
+      "url": "https://www.openskope.org/skope-prototype",
+      "path": "skope-prototype"
+    },
+    {
+      "id": "237",
+      "title": "Prototype User's Guide",
+      "url": "https://www.openskope.org/skope-prototype-users-guide",
+      "path": "skope-prototype-users-guide"
+    },
+    {
+      "id": "280",
+      "title": "SKOPE NSF Proposal",
+      "url": "https://www.openskope.org/skope-nsf-proposal",
+      "path": "skope-nsf-proposal"
+    },
+    {
+      "id": "303",
+      "title": "Publications",
+      "url": "https://www.openskope.org/publications",
+      "path": "publications"
+    },
+    {
+      "id": "306",
+      "title": "Products",
+      "url": "https://www.openskope.org/publications-presentations",
+      "path": "publications-presentations"
+    },
+    {
+      "id": "340",
+      "title": "SKOPE II Team Meeting",
+      "url": "https://www.openskope.org/meeting17",
+      "path": "meeting17"
+    },
+    {
+      "id": "403",
+      "title": "SKOPE Application",
+      "url": "https://www.openskope.org/access-data-using-skope",
+      "path": "access-data-using-skope"
+    },
+    {
+      "id": "412",
+      "title": "SKOPE User's Guide",
+      "url": "https://www.openskope.org/skope-users-guide",
+      "path": "skope-users-guide"
+    },
+    {
+      "id": "559",
+      "title": "SKOPE Products",
+      "url": "https://www.openskope.org/skope-products",
+      "path": "skope-products"
+    },
+    {
+      "id": "590",
+      "title": "What is SKOPE",
+      "url": "https://www.openskope.org/what-is-skope",
+      "path": "what-is-skope"
+    },
+    {
+      "id": "621",
+      "title": "SKOPE: Prototype App User's Guide",
+      "url": "https://www.openskope.org/skope-prototype-app-users-guide",
+      "path": "skope-prototype-app-users-guide"
+    },
+    {
+      "id": "711",
+      "title": "SKOPE Release Info",
+      "url": "https://www.openskope.org/announcement",
+      "path": "announcement"
+    },
+    {
+      "id": "142",
+      "title": "FedData",
+      "url": "https://www.openskope.org/feddata",
+      "path": "feddata"
+    },
+    {
+      "id": "180",
+      "title": "Presentations",
+      "url": "https://www.openskope.org/presentations",
+      "path": "presentations"
+    }
+  ],
+  "excluded_item_counts": {
+    "attachment:inherit": 125,
+    "nav_menu_item:publish": 48,
+    "custom_css:publish": 1,
+    "page:draft": 1,
+    "wp_global_styles:publish": 1
+  },
+  "unresolved_legacy_links": [
+    "https://openskope.org/app"
+  ],
+  "media": [
+    {
+      "path": "/wp-content/uploads/2015/03/1273-1024x786.png",
+      "source_urls": [
+        "http://www.envirecon.org/wp-content/uploads/2015/03/1273-1024x786.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2015/03/Provenance.gif",
+      "source_urls": [
+        "http://www.envirecon.org/wp-content/uploads/2015/03/Provenance.gif"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2015/03/RiskLandscape-1024x615.png",
+      "source_urls": [
+        "http://www.envirecon.org/wp-content/uploads/2015/03/RiskLandscape-1024x615.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2015/03/RiskLandscape.png",
+      "source_urls": [
+        "http://www.envirecon.org/wp-content/uploads/2015/03/RiskLandscape.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2015/03/SKOPE_SFIcropSm.jpg",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2015/03/SKOPE_SFIcropSm.jpg"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2015/03/Screen-Shot-03-18-15-at-12.51-PM.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2015/03/Screen-Shot-03-18-15-at-12.51-PM.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/ScreenShot001.bmp",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/ScreenShot001.bmp"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/ScreenShot003.bmp",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/ScreenShot003.bmp"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f1.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f1.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f10.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f10.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f2.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f2.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f3.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f3.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f4.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f4.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f5.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f5.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f6.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f6.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f7.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f7.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f7a.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f7a.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/02/f8.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/02/f8.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/10/SKOPE-II-NSF-Final-Proposal-for-the-Web.pdf",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/10/SKOPE-II-NSF-Final-Proposal-for-the-Web.pdf"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2016/12/dAlpoim-Guedes-et-al-climate-chgange-archaeology-PNAS-Perspective-16.pdf",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2016/12/dAlpoim-Guedes-et-al-climate-chgange-archaeology-PNAS-Perspective-16.pdf"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2018/06/Discover.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2018/06/Discover.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2018/06/Graph.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2018/06/Graph.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2018/06/Info.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2018/06/Info.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2018/06/Map.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2018/06/Map.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2018/06/Select.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2018/06/Select.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2018/09/skope-300x169.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2018/09/skope-300x169.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/08/UG12.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/08/UG12.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/08/UG4.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/08/UG4.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/08/UG7.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/08/UG7.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/08/UG9.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/08/UG9.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/09/Select-Dataset.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/09/Select-Dataset.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/10/Visualize-Data.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/10/Visualize-Data.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Chaco-PaleoCAR-V3.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2021/11/Chaco-PaleoCAR-V3.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Hamburger.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/11/Hamburger.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Header.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2021/11/Header.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/HeaderBase-Color-2021v4.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2021/11/HeaderBase-Color-2021v4.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Menu-205x300.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2021/11/Menu-205x300.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Select-Area.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/11/Select-Area.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Select-Dataset.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/11/Select-Dataset.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Upload-Analysis.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/11/Upload-Analysis.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/Warning-2.png",
+      "source_urls": [
+        "http://www.openskope.org/wp-content/uploads/2021/11/Warning-2.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2022/04/Analyze.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2022/04/Analyze.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2022/04/Visualize.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2022/04/Visualize.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2022/05/Tewa-Basin-1540-2022-05-04_15-57-37.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2022/05/Tewa-Basin-1540-2022-05-04_15-57-37.png"
+      ]
+    },
+    {
+      "path": "/wp-content/uploads/2022/05/Zuni-Graph-2022-05-04_15-44-35.png",
+      "source_urls": [
+        "https://www.openskope.org/wp-content/uploads/2022/05/Zuni-Graph-2022-05-04_15-44-35.png"
+      ]
+    }
+  ]
+}

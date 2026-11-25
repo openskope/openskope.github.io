@@ -1,0 +1,52 @@
+baseURL: https://www.openskope.org/
+title: SKOPE
+locale: en-US
+defaultContentLanguage: en
+enableRobotsTXT: true
+enableGitInfo: false
+# Keep original WordPress routes through content front matter aliases.
+disableKinds: [taxonomy, term]
+params:
+  description: Synthesizing Knowledge of Past Environments
+  offlineSearch: true
+  copyright: SKOPE contributors
+  ui:
+    navbar_logo: false
+    navbar_theme: light
+    sidebar_menu_compact: true
+    feedback:
+      enable: false
+    readingtime:
+      enable: false
+  links:
+    user:
+      - name: Contact the SKOPE team
+        url: mailto:skope-team@googlegroups.com
+        icon: fa fa-envelope
+menu:
+  main:
+    - name: Use SKOPE
+      pageRef: /use-skope
+      weight: 10
+    - name: Data & tools
+      pageRef: /data-tools
+      weight: 20
+    - name: Research
+      pageRef: /research
+      weight: 30
+    - name: About
+      pageRef: /about
+      weight: 40
+    - name: Launch SKOPE
+      url: https://app.openskope.org
+      weight: 50
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+module:
+  hugoVersion:
+    min: 0.170.1
+  imports:
+    - path: github.com/docsy/docsy/theme
+# Use default content/static mounts; custom mounts must retain static -> static.

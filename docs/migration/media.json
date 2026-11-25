@@ -1,0 +1,336 @@
+[
+  {
+    "path": "/wp-content/uploads/2015/03/1273-1024x786.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2015/03/1273-1024x786.png",
+    "sha256": "1e6d61e8dca61422c504bcf64886094443a768db74bbc9bf20d37a1f558e266c",
+    "bytes": 709724,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2015/03/Provenance.gif",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2015/03/Provenance.gif",
+    "sha256": "384b635b845b04ef8a1cb764419256083a377f97189090f12fa4fd27b3875931",
+    "bytes": 85304,
+    "content_type": "image/gif"
+  },
+  {
+    "path": "/wp-content/uploads/2015/03/RiskLandscape-1024x615.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2015/03/RiskLandscape-1024x615.png",
+    "sha256": "439bf26fa2a5219cde106a7f07abb305d43d7d62a998c34618329e9d84f45324",
+    "bytes": 432889,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2015/03/RiskLandscape.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2015/03/RiskLandscape.png",
+    "sha256": "6cdf6cfde3429c5f1c17a785f1592548a2dbccb9c6259da5c5c5243adfb323c5",
+    "bytes": 479067,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2015/03/SKOPE_SFIcropSm.jpg",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2015/03/SKOPE_SFIcropSm.jpg",
+    "sha256": "a8f8817c35782d263088f7d93f1452af9f5b1a1863b73a38741e24cabce79499",
+    "bytes": 359557,
+    "content_type": "image/jpeg"
+  },
+  {
+    "path": "/wp-content/uploads/2015/03/Screen-Shot-03-18-15-at-12.51-PM.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2015/03/Screen-Shot-03-18-15-at-12.51-PM.png",
+    "sha256": "7d56073b64ed975eb72f2db4335b7fde4fc42521234b149e3febd504f873c310",
+    "bytes": 72376,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/ScreenShot001.bmp",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/ScreenShot001.bmp",
+    "sha256": "0a858efcb9356780e79e32979a027880a8ff2aeab56f8203e2f8fdfb9649be13",
+    "bytes": 837110,
+    "content_type": "image/x-ms-bmp"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/ScreenShot003.bmp",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/ScreenShot003.bmp",
+    "sha256": "74c923cf873cf227323455610d886c45442742736006d38b6524e83d26d2dc89",
+    "bytes": 1384630,
+    "content_type": "image/x-ms-bmp"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f1.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f1.png",
+    "sha256": "b53c9125a7f5664346baf9822004f89b03ac93ed60d45a211f19f6a393ac3809",
+    "bytes": 431597,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f10.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f10.png",
+    "sha256": "2823cff559e87b8fe02b9abe860e33273c22c58c0d68c802da5fbd7e07c6c88c",
+    "bytes": 288545,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f2.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f2.png",
+    "sha256": "80ae16d9ad21882f2971b90602fbb3d3ae8d1b070e3d164b788161cff74aed33",
+    "bytes": 11387,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f3.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f3.png",
+    "sha256": "b9dd818a22fbfb646376a96e9c4c449dc58aad30fb157b5fa64d636172631d87",
+    "bytes": 431184,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f4.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f4.png",
+    "sha256": "d07fde655c7c61a1f7441b4c6f6015e7e3d048979ee526441ffcc73cd2381288",
+    "bytes": 5157,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f5.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f5.png",
+    "sha256": "a5e79d546616f8e37568e1cccc36680e3d7694c4bfb1c53b1615dd0bc17920c9",
+    "bytes": 118004,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f6.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f6.png",
+    "sha256": "0dd7ecd5b32021f386f72a5fa7cae3c99e4df17eb9c7cc6a007e1e465991d8d7",
+    "bytes": 35510,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f7.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f7.png",
+    "sha256": "3e45c4f0f7f3f3bd01be83a8ec4a000540955fd9e5af7fdefe75ec898a66b910",
+    "bytes": 26901,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f7a.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f7a.png",
+    "sha256": "32a680d01ab573816be8696a06059fc6d3022e5da1cd13f3036839acc95cf89a",
+    "bytes": 3029,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/02/f8.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/02/f8.png",
+    "sha256": "34521ba4e10d424a9b150491285d9bcf275df59718e79f94a3c1201dfbb81e52",
+    "bytes": 450699,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2016/10/SKOPE-II-NSF-Final-Proposal-for-the-Web.pdf",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2016/10/SKOPE-II-NSF-Final-Proposal-for-the-Web.pdf",
+    "sha256": "bc81699e5b3c256f18f689dd68ff1f9dc9e9197fcb437e1b95873a8b46059117",
+    "bytes": 603325,
+    "content_type": "application/pdf"
+  },
+  {
+    "path": "/wp-content/uploads/2016/12/dAlpoim-Guedes-et-al-climate-chgange-archaeology-PNAS-Perspective-16.pdf",
+    "errors": [
+      "HTTP Error 404: Not Found"
+    ]
+  },
+  {
+    "path": "/wp-content/uploads/2018/06/Discover.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/06/Discover.png",
+    "sha256": "62e6a316c24735241f332c8e3d1d88d4bce1fd77b2bd31185b24fab86970af81",
+    "bytes": 484091,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/06/Graph.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/06/Graph.png",
+    "sha256": "aaadf8e3e9d4e937fd08c3e37abd078f55f128adb5f05e2b1fe297fcc24bbcd1",
+    "bytes": 62590,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/06/Info.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/06/Info.png",
+    "sha256": "1ff3568d9a9dd9381c1ec072d96e69dcf47f35694caf86a3b82290a772121e26",
+    "bytes": 1184997,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/06/Map.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/06/Map.png",
+    "sha256": "83536120ca1117eb7e37acdaeddc634d95519deecd976423584fdc103a573b6d",
+    "bytes": 1428642,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/06/Select.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/06/Select.png",
+    "sha256": "9260594776b1d2ab074cf48982d46dd18bda1bae9b10391fbd42cd0016d12d23",
+    "bytes": 374308,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/09/skope-300x169.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/09/skope-300x169.png",
+    "sha256": "d9c48fe5d36e2fafd9363b879466c0d2af139d4462411453c7409aaf8e9a183f",
+    "bytes": 58001,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/08/UG12.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/08/UG12.png",
+    "sha256": "71a0a7d3c4a2c808bd8fdc8a46cca2fb7861d8125dede444c01330c5e476dd80",
+    "bytes": 748,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/08/UG4.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/08/UG4.png",
+    "sha256": "3394fd61703f262f91fd8dff5843323ae479ad0b65bb652b17c484900f8fc994",
+    "bytes": 1142,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/08/UG7.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/08/UG7.png",
+    "sha256": "4e1d2396efc30f5d4d9733686344f27edc7a578b8eec98637a6053c7783c0b4a",
+    "bytes": 1474,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/08/UG9.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/08/UG9.png",
+    "sha256": "76510c3ea6fd2b72bc151cc5f021faf5015f0fd64e04e06cd685e7455fe7f476",
+    "bytes": 1264,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/09/Select-Dataset.png",
+    "errors": [
+      "HTTP Error 404: Not Found"
+    ]
+  },
+  {
+    "path": "/wp-content/uploads/2021/10/Visualize-Data.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/10/Visualize-Data.png",
+    "sha256": "d2d7de84b6365183c1e26ce48384f43a53f196e6c2417bc3148025fbe3955ed2",
+    "bytes": 2021,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Chaco-PaleoCAR-V3.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Chaco-PaleoCAR-V3.png",
+    "sha256": "01b4c2164f586bfc2a697709ea1deb1f67e7ec2f02cf44edd7740d6ce7299fba",
+    "bytes": 56632,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Hamburger.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Hamburger.png",
+    "sha256": "20bd0959859617ede26979288a89eee4cda2b666e450a073484c2629fbe02bbf",
+    "bytes": 3028,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Header.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Header.png",
+    "sha256": "d48adf07d0c26b9731dd8c8966db28606b8c2a446f8191f1f783a8d33318bfaa",
+    "bytes": 78889,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/HeaderBase-Color-2021v4.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/HeaderBase-Color-2021v4.png",
+    "sha256": "8b326253f3f1a98beb78e3aba6ccf63827062c71df1771503e207ce9eb265845",
+    "bytes": 19383,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Menu-205x300.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Menu-205x300.png",
+    "sha256": "cad5dbcfb34919f78bc0580cd3a039d4bb83d59cf081adebed4e1a7d93b9af4a",
+    "bytes": 30999,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Select-Area.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Select-Area.png",
+    "sha256": "65ba474bb5fcc9191448f7e57fa9d44fddbe5ea9f2ec88402eb5c5633880cb02",
+    "bytes": 722277,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Select-Dataset.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Select-Dataset.png",
+    "sha256": "14f203dfe2e649b799a78e22dfe6c117e029d441a192b95c9a599d925c6f605b",
+    "bytes": 691223,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Upload-Analysis.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Upload-Analysis.png",
+    "sha256": "49b4bcaebec2f2c3456d94fd013eaba4d10a6dbbc43a6291c4e7b9cc8f5f5801",
+    "bytes": 3712,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/11/Warning-2.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/11/Warning-2.png",
+    "sha256": "8c70453bbcb6dd830fb91bae61d3335cb4c4f644f17b51810da334433cbe1b13",
+    "bytes": 825,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2022/04/Analyze.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2022/04/Analyze.png",
+    "sha256": "9c0e76b2088bedef244a19ad032f28665fb295610427574f25e5d7a2c26b896c",
+    "bytes": 202782,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2022/04/Visualize.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2022/04/Visualize.png",
+    "sha256": "2379b64bab3687bed69c20b737e320d02f2db7eae397eac7143782571baea53d",
+    "bytes": 219690,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2022/05/Tewa-Basin-1540-2022-05-04_15-57-37.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2022/05/Tewa-Basin-1540-2022-05-04_15-57-37.png",
+    "sha256": "bf94b788d8ebca52e8b38794523bcae2caa35ecb2bbf40fced17055b253801b9",
+    "bytes": 656439,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2022/05/Zuni-Graph-2022-05-04_15-44-35.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2022/05/Zuni-Graph-2022-05-04_15-44-35.png",
+    "sha256": "ee98557edd4fae87b799214dbf83ad9fc4f81eb24a5928cc90d29bdf6cd7db7c",
+    "bytes": 81690,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2021/10/Heade-2021-10.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2021/10/Heade-2021-10.png",
+    "sha256": "19417ed025c1e9c122fdaf11990567a24773d68d2c3fb5d774a599041d67fce9",
+    "bytes": 96097,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/05/cropped-AltHeadeID-1-32x32.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/05/cropped-AltHeadeID-1-32x32.png",
+    "sha256": "4a76d0b7b1b324d1ff4c06452fc0c1e81a20a386089f793878e59701045a0344",
+    "bytes": 1652,
+    "content_type": "image/png"
+  },
+  {
+    "path": "/wp-content/uploads/2018/05/AltHeaderv3.png",
+    "fetched_from": "https://www.openskope.org/wp-content/uploads/2018/05/AltHeaderv3.png",
+    "sha256": "dc6799b8e28b5250f218a950e4d40454cbbfb70cf1cd80ba8cac2cbef7412abb",
+    "bytes": 65051,
+    "content_type": "image/png"
+  }
+]

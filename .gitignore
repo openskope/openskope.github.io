@@ -1,0 +1,11 @@
+/public/
+/resources/_gen/
+/.hugo_cache/
+/.hugo_build.lock
+/node_modules/
+/assets/jsconfig.json
+/hugo_stats.json
+/tmp/
+*.xml
+.DS_Store
+__pycache__/
