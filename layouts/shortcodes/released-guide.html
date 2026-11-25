@@ -1,0 +1,20 @@
+{{- /* Render Markdown once, retaining the included guide's native heading outline. */ -}}
+{{- $catalog := .Site.Params -}}
+{{- $version := $catalog.guide_latest_released -}}
+{{- if not (findRE `^v[0-9]{4}\.(0[1-9]|1[0-2])(\.[0-9]+)?$` $version) -}}
+  {{- errorf "Latest published user guide must use a CalVer release, not %q" $version -}}
+{{- else -}}
+  {{- $release := where $catalog.versions "version" $version -}}
+  {{- if ne (len $release) 1 -}}
+    {{- errorf "Define exactly one latest released user guide" -}}
+  {{- else -}}
+    {{- $guide := .Site.GetPage (index $release 0).guide_page -}}
+    {{- if not $guide -}}
+      {{- errorf "Missing latest released user guide" -}}
+    {{- else if ne $guide.Params.guide_version $version -}}
+      {{- errorf "Released guide page must match the selected app release %s" $version -}}
+    {{- else -}}
+      {{- $guide.RenderShortcodes -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

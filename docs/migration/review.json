@@ -137,5 +137,14 @@
     "catalog": "All 25 resource entries use Markdown definition lists and links. Historical destinations and visible URL-label mismatches are retained. Standard Markdown links use ordinary same-tab navigation.",
     "archives": "The 2015 workshop and 2017 meeting use Markdown emphasis, nested lists and explicit line breaks. The same list conversion covers the 2022 release feature list; its redundant app-link span is removed.",
     "preservation": "Compared all rendered content bodies against a fresh pre-change build: wording, link destinations and anchors retained after whitespace normalization. Separated the meeting agenda break at 10:00 from the preceding item. The user-edited May 2022 landing-page announcement is byte-for-byte unchanged."
+  },
+  "guide_versions_review": {
+    "reviewed_on": "2026-11-25",
+    "scope": "Requested staging screenshot refresh, release-specific guides and CalVer version navigation.",
+    "screenshots": "Keep both actual PaleoCAR V3 views: full dataset extent and imported skopeui/chaco.geojson at 1600x1000. Use SKOPE uses the Chaco view; the staging guide includes both. Capture build v2026.11.1-6-gbd11a16; map attribution retained. Archived media remain unchanged.",
+    "releases": "The observed production app reports v2023.10-4-g3189. Preserve the authored 2023 guide in a frozen v2023.10 snapshot and render that same source at /users-guide/, retaining aliases and section IDs. The /users-guide/next/ draft targets the exact staging commit after v2026.11.1.",
+    "navigation": "Embed Docsy’s upstream navbar-version-selector component in the guide version notice and archive index, keeping the global navbar identical across pages. Use native params.versions and the upstream archive banner. A small local-page adapter preserves subpath deployment; release metadata and checksums live with the Docsy configuration.",
+    "authored_content": "The released guide body, including scientific explanations, authors and original imagery, remains intact. Operational staging instructions are a separate preview. Current navigation, metadata buttons, GeoJSON tools, year controls and export names are documented without revising scientific claims.",
+    "publishing_guard": "The stable guide entry point accepts only CalVer release identifiers and requires the selected page to declare the matching release. Regression checks reject staging-preview pointers, mismatched pages and frozen-body changes."
   }
 }

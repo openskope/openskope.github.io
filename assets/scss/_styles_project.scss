@@ -128,3 +128,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid $link-color; outline-
 @media (min-width: 1100px) {
   .skope-research-outputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+// Guide releases share one version notice and navigation pattern.
+.td-content .skope-guide-version { margin-bottom: 2rem; padding: 1rem 1.25rem; border: 1px solid $gray-300; border-radius: .25rem; background: $gray-100; }
+.skope-guide-version p { margin-bottom: .75rem; }
+
+.skope-guide-version-selector { display: inline-block; max-width: 100%; margin-bottom: 1rem; }
+.skope-guide-version .skope-guide-version-selector { margin-bottom: 0; }
+.skope-guide-version-selector .td-version-menu__title { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .5rem .75rem; border: 1px solid $primary; border-radius: .25rem; color: $primary; background: #fff; text-decoration: none; }
+.skope-guide-version-selector .td-version-menu__title:hover { background: $gray-100; text-decoration: underline; text-underline-offset: .2em; }

@@ -100,6 +100,10 @@ Optional `width`, `align` (`left`, `right`, `center`), `class`, `image-class`,
 `link` and `eager=true` parameters control display without duplicating HTML.
 Keep archived media in place; `link` can point to an original image URL.
 
+User guides use release-specific CalVer snapshots and a separate staging preview.
+See [guide versioning](docs/user-guide-versioning.md) for the Docsy selector,
+release metadata and publishing process.
+
 “On this page” uses Hugo's native `TableOfContents` for headings at levels 2–4.
 Keep headings in Markdown so they appear automatically; do not duplicate a list
 of section links. `notoc: true` deliberately disables this outline; `toc_hide`

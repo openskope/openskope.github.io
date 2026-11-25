@@ -1,0 +1,25 @@
+{{- $catalog := .Site.Params -}}
+{{- $version := .Params.guide_version -}}
+{{- $preview := eq $version "next" -}}
+{{- $previewConfig := index (where $catalog.versions "kind" "next") 0 -}}
+{{- $release := where $catalog.versions "version" $version -}}
+{{- if and (not $preview) (ne (len $release) 1) }}{{ errorf "Unknown user guide version %q" $version }}{{ end -}}
+{{- if not $preview -}}
+  {{- $entry := index $release 0 -}}
+  {{- if not (findRE `^v[0-9]{4}\.(0[1-9]|1[0-2])(\.[0-9]+)?$` $version) }}{{ errorf "User guide version must use app CalVer: %s" $version }}{{ end -}}
+  {{- if not (findRE `^[0-9a-f]{40}$` $entry.app_revision) }}{{ errorf "Pin a full app commit for guide %s" $version }}{{ end -}}
+  {{- if ne (sha256 (strings.TrimSpace .RawContent)) $entry.content_sha256 }}{{ errorf "Frozen guide content changed for %s; review the release snapshot" $version }}{{ end -}}
+{{- end -}}
+<aside class="skope-guide-version" aria-label="Guide version">
+  {{- if $preview }}
+    <p><strong>Staging preview</strong> · after SKOPE {{ $previewConfig.base_release }}</p>
+    <p>Draft instructions for <a href="https://staging.openskope.org/">staging.openskope.org</a>, build <code>{{ $previewConfig.app_build }}</code>. This is not the released guide.</p>
+  {{- else }}
+    <p><strong>Guide for SKOPE {{ $version }}</strong> · released interface</p>
+    <p>These instructions describe the {{ $version }} interface. <a href="https://github.com/openskope/skopeui/tree/{{ (index $release 0).app_revision }}">View the release source</a>.</p>
+  {{- end }}
+  {{ partial "skope/guide-version-menu.html" . }}
+</aside>
+{{- if and (not $preview) (ne $version $catalog.guide_latest_released) -}}
+  {{- partial "version-banner.html" (dict "Site" (dict "Params" (dict "archived_version" true "version" $version "url_latest_version" (.Site.GetPage "/users-guide").RelPermalink))) -}}
+{{- end -}}

@@ -39,7 +39,9 @@ Choose a dataset and study area, then visualize or analyze the data.
 
 ## [SKOPE User Guide]({{< relref "/users-guide" >}}) {#skope-guide-heading}
 
-Follow the guide from choosing data through visualization and analysis, or jump to a step.
+Follow the released guide from choosing data through visualization and analysis, or jump to a step.
+
+For the updated interface shown above, see the [staging preview guide]({{< relref "/guide-versions/next" >}}).
 
 </div>
 <div class="skope-use-guide__links">

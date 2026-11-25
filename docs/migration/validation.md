@@ -239,3 +239,60 @@ and archives; screenshots and runner evidence are in ignored
 The final `/preview/` browser pass also passed all 18 mobile/desktop viewport
 checks across the nine affected pages, with all 18 figures, 25 catalog entries,
 zero axe violations and no runtime errors.
+
+## Staging screenshots and CalVer guide versions — 2026-11-25
+
+Captured the actual staging UI (build v2026.11.1-6-gbd11a16) at 1600x1000,
+including PaleoCAR V3's full extent and the study area uploaded from
+skopeui/chaco.geojson. Both views and map attribution are retained. Current
+screenshots live under assets/images/screenshots; the shared image renderer now
+accepts those paths as well as archived WordPress media. Existing archived
+originals remain unchanged. Use SKOPE shows the Chaco view, labeled as staging.
+
+The latest released guide at /users-guide/ includes the same frozen body as
+/users-guide/v2023.10/. Compared its body verbatim with the committed authored
+guide. The production app reports v2023.10-4-g3189. The separate
+/users-guide/next/ draft targets staging after CalVer v2026.11.1 and pins the
+full app commit. It contains both new screenshots and updated operational UI
+instructions; the released scientific explanations remain unchanged.
+
+Version navigation uses Docsy's upstream navbar-version-selector.html and
+archived-version banner with native params.versions configuration. A small
+adapter resolves local guide pages for root/subpath deployments. The archive
+index uses Docsy's simple_list option. Guide version/commit validation and frozen
+content checks catch accidental snapshot edits. Publishing and CalVer procedures
+are in docs/user-guide-versioning.md; the UI review and its numerical/export
+verification limits are in docs/user-guide-ui-review.md.
+
+Docker/Make check passed: 23 Python tests, 3 Node maintenance tests, 53 HTML
+pages, 27 imported routes and 46 archived media files, with zero errors or anchor
+warnings. Root and /preview/ builds/site checks passed. Chromium checked the
+guide landing, snapshot, preview and Use SKOPE at desktop/mobile widths; native
+version switching, deployment-aware links, six-section outlines, deep links,
+loaded screenshots, header clearance and horizontal fit passed. Axe found no
+violations on those pages and no runtime page errors were observed. Native
+Docsy URLs omit trailing slashes; the browser harness accepts that formatting.
+Evidence is in ignored tmp/guide-versions-review/ and tmp/staging-guide-review/.
+
+## In-page guide selector — 2026-11-25
+
+Moved Docsy's selector out of the global navbar into the guide version notice;
+the archive index embeds the same selector through a shortcode. The navbar is
+again identical across project and guide pages. Release metadata, snapshot bodies,
+checksums, routes and section anchors are unchanged. The guide fixture verifies
+selector placement inside the notice and deployment-aware version links, stubbing
+only the upstream renderer; Chromium exercises the real Docsy dropdown.
+
+Validation passed: 23 Python tests, 3 Node maintenance tests, and 53 HTML pages
+with no errors or anchor warnings on root and /preview/ builds. Chromium checked
+45 route/viewport combinations from 320 to 1920px, verified that the selector is
+absent from every tested navbar, switched guide versions from the in-page mobile
+control, and checked section deep links. No horizontal overflow, header overlap,
+axe violations or runtime errors were observed. Reviewed the mobile dropdown
+screenshot; evidence is in ignored tmp/guide-selector-review/.
+
+The final pre-commit review also hardened the released-guide entry point against
+preview pointers and mismatched release/page metadata, with negative regression
+cases in the Hugo fixture. The full 23-test Python suite, 3 maintenance tests,
+53-page check and subpath render/site check passed after that change. Reviewed
+commits separate editor ignores, screenshot assets and CalVer guide publishing.

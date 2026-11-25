@@ -1,0 +1,13 @@
+{{- /* Resolve local guide pages before passing entries to Docsy's native menu.
+     Docsy expects complete URLs and deliberately does not apply relURL itself. */ -}}
+{{- $items := slice -}}
+{{- range .Site.Params.versions -}}
+  {{- $page := $.Site.GetPage .guide_page -}}
+  {{- if not $page }}{{ errorf "Missing guide page for version menu: %s" .guide_page }}{{ end -}}
+  {{- $items = $items | append (dict "name" (.name | default "") "version" (.version | default "") "kind" (.kind | default "") "url" $page.RelPermalink "pagelinks" false) -}}
+{{- end -}}
+{{- $version := .Params.guide_version | default .Site.Params.guide_latest_released -}}
+{{- $params := dict "version_menu" .Site.Params.version_menu "version_menu_pagelinks" false "versions" $items "version" $version -}}
+<nav class="skope-guide-version-selector" aria-label="User guide versions">
+  {{ partial "navbar-version-selector.html" (dict "Site" (dict "Params" $params "BaseURL" .Site.BaseURL) "Page" .Page) }}
+</nav>

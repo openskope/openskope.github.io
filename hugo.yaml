@@ -9,6 +9,29 @@ disableKinds: [taxonomy, term]
 params:
   description: Synthesizing Knowledge of Past Environments
   offlineSearch: true
+  # Only the user guide is versioned; app releases use CalVer.
+  version_menu: User Guide
+  version_menu_pagelinks: false
+  guide_latest_released: v2023.10
+  versions:
+    - name: Current user guide
+      kind: latest
+      url: /users-guide/
+      guide_page: /users-guide
+    - version: v2023.10
+      url: /users-guide/v2023.10/
+      guide_page: /guide-versions/v2023.10
+      app_revision: b5f65844b6ac0c5cc38ddb7a5a4362802688f33f
+      content_sha256: bfa6b8d82086e58e90fc7081cad9acad137e8947f2b02e34ecd4099671621f14
+    - name: Staging preview
+      version: next
+      kind: next
+      url: /users-guide/next/
+      guide_page: /guide-versions/next
+      base_release: v2026.11.1
+      app_revision: bd11a160de7e6b0072bd98d6aa223be3cd9f1d26
+      app_build: v2026.11.1-6-gbd11a16
+      reviewed: 2026-11-25
   website_source: https://github.com/openskope/openskope.github.io
   ui:
     navbar_logo: false
